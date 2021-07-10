@@ -4,7 +4,7 @@ function jn(a, b, c, d, e, f, g) {
 ad:function(a,b){
     
 this.sel[a]=b;
-}
+},
 };
      return this.sel;
 };
