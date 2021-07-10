@@ -1,10 +1,16 @@
-var Jn = function(a, b, c, d, e, f, g) {
+function jn(a, b, c, d, e, f, g) {
         this.sel = document.querySelectorAll(a);
      return this.sel;
+};
 
-            };
+jn.prototype={
+ad:function(a,b){
+    
+this.sel[a]=b;
+}
+};
 
-            Jn.prototype.createVar = function(a, b) {
+            jn.prototype.createVar = function(a, b) {
                 window[a] = b;
             };
 var random=function(a,b){
