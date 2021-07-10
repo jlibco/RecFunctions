@@ -1,14 +1,15 @@
 function jn(a, b, c, d, e, f, g) {
         this.sel = document.querySelectorAll(a);
-     return this.sel;
-};
-
-jn.prototype={
+       jn.prototype={
 ad:function(a,b){
     
 this.sel[a]=b;
 }
 };
+     return this.sel;
+};
+
+
 
             jn.prototype.createVar = function(a, b) {
                 window[a] = b;
