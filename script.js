@@ -41,6 +41,20 @@ function getQueryAll(a) {
     var b = document.querySelectorAll(a);
     return b;
 };
+function norm(aNumber, low, high) {
+      return (aNumber - low) / (high - low);
+    };
+function sq(aNumber) {
+      return aNumber * aNumber;
+    };
+function mag(a, b, c) {
+      if (c) {
+        return Math.sqrt(a * a + b * b + c * c);
+      }
+
+      return Math.sqrt(a * a + b * b);
+    };
+
 
 function min(x) {
     return Math.min(x);
