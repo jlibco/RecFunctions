@@ -43,11 +43,13 @@ function getQueryAll(a) {
 };
 
 function ellipse(x,y,w,h){
+console.log(x);
+console.log(y);
 var ell=document.createElement("svg");
 var a="1000";
 var b="1000";
-ell.width=a.toString();
-ell.height=b.toString();
+ell.width=a;
+ell.height=b;
     
 var ell2=document.createElement("ellipse");
 ell2.cx=x;
