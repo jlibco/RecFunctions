@@ -14,28 +14,29 @@ function jn(a, b, c, d, e, f, g) {
 jn.prototype.createVar = function(a, b) {
     window[a] = b;
 };
-var deg = function(x) {
+function deg(x) {
     return 180 / Math.PI * x;
 };
-var getId = function(a) {
+
+function getId(a) {
     var b = document.getElementById(a);
     return b;
 };
-var getClass = function(a) {
+function getClass(a) {
     var b = document.getElementsByClassName(a);
     return b;
 };
 
-var getTag = function(a) {
+function getTag(a) {
     var b = document.getElementsByTagName(a);
     return b;
 };
 
-var getQuery = function(a) {
+function getQuery(a) {
     var b = document.querySelector(a);
     return b;
 };
-var getQueryAll = function(a) {
+function getQueryAll(a) {
     var b = document.querySelectorAll(a);
     return b;
 };
