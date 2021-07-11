@@ -64,7 +64,12 @@ function pow(a) {
 function ciel(a) {
     return Math.ceil(a);
 };
-
+function sqrt(x){
+return Math.sqrt(x);    
+};
+function cbrt(x){
+return Math.cbrt(x);   
+};
 function round(a) {
     return Math.round(a);
 };
