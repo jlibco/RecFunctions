@@ -49,7 +49,9 @@ function min(x) {
 function max(x) {
     return Math.max(x);
 };
-
+function sign(x){
+ return Math.sign(x);   
+};
 function abs(a) {
     return Math.abs(a);
 };
