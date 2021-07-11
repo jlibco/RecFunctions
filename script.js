@@ -71,9 +71,11 @@ body.appendChild(ell);
 
 
 };
+
 function rect(x,y,w,h,tx,ty,st){
 thediv208.innerHTML=thediv208.innerHTML+'<svg height='+h*2+10+' width='+w*2+10+' style="position:absolute; left:'+tx+'px; top:'+ty+'px; ">  <rect cx='+x+' cy='+y+' rx='+w+' ry='+h+' style='+st+' /></svg> ';
 };
+
     function norm(aNumber, low, high) {
       return (aNumber - low) / (high - low);
     };
