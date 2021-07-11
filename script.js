@@ -36,7 +36,9 @@ var getQueryAll=function(a){
 var b=document.querySelectorAll(a);
 return b;
 };
-
+var pow=function(a,b){
+return Math.pow(a,b);        
+};
 var floor=function(a){
 return Math.floor(a);
     
