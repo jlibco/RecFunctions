@@ -14,6 +14,9 @@ this.sel[a]=b;
             jn.prototype.createVar = function(a, b) {
                 window[a] = b;
             };
+var deg=function(x){
+return 180*Math.PI*x;        
+};
 var getId=function(a){
 var b=document.getElementById(a);
 return b;
@@ -36,6 +39,9 @@ var getQueryAll=function(a){
 var b=document.querySelectorAll(a);
 return b;
 };
+var abs=function(a){
+return Math.abs(a);        
+};
 var pow=function(a,b){
 return Math.pow(a,b);        
 };
@@ -54,18 +60,22 @@ var c=b-a;
 var mr=Math.random()*c+((b+a)/2)-c/2;
 return mr;
 };
+
+
  function sin(angle) {
-                	return Math.sin(angle / 180 * Math.PI);
+                	return Math.sin(angle));
                 };
                 
                 // A cosine function that converts from radians to degrees.
                 function cos(angle) {
-                	return Math.cos(angle / 180 * Math.PI);
+                	return Math.cos(angle);
                 };
-                
+                function tan(angle){
+                return Math.tan(angle);        
+                }
                 // An atan2 function.
                 function atan2(x, y) {
-                	return Math.atan2(x, y) / Math.PI * 180;
+                	return Math.atan2(x, y);
                 };
 // Returns a number from a certain range.
                 function lerp(num1, num2, amount) {
