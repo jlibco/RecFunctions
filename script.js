@@ -48,7 +48,7 @@ function getQueryAll(a) {
 
 
 function ellipse(x,y,w,h,tx,ty,st){
-thediv208.innerHTML=thediv208.innerHTML+'<svg height='+h*2+' width='+w*2+' style="position:absolute; left:'+tx+'px; top:'+ty+'px; ">  <ellipse cx='+x+' cy='+y+' rx='+w+' ry='+h+' style='+st+' /></svg> ';
+thediv208.innerHTML=thediv208.innerHTML+'<svg height='+h*2+10+' width='+w*2+10+' style="position:absolute; left:'+tx+'px; top:'+ty+'px; ">  <ellipse cx='+x+' cy='+y+' rx='+w+' ry='+h+' style='+st+' /></svg> ';
 /*
 var ell=document.createElement("svg");
 var a="1000";
@@ -73,8 +73,10 @@ body.appendChild(ell);
 
 
 };
-
-function norm(aNumber, low, high) {
+function rect(x,y,w,h,tx,ty,st){
+thediv208.innerHTML=thediv208.innerHTML+'<svg height='+h*2+10+' width='+w*2+10+' style="position:absolute; left:'+tx+'px; top:'+ty+'px; ">  <rect cx='+x+' cy='+y+' rx='+w+' ry='+h+' style='+st+' /></svg> ';
+};
+    function norm(aNumber, low, high) {
       return (aNumber - low) / (high - low);
     };
 function sq(aNumber) {
