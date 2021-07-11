@@ -48,7 +48,7 @@ function getQueryAll(a) {
 
 
 function ellipse(x,y,w,h,tx,ty,st){
-thediv208.innerHTML=thediv208.innerHTML+'<svg height='(h+10)' width='+(w+10)+' style="position:absolute; left:'+tx+'px; top:'+ty+'px; ">  <ellipse cx='+x+' cy='+y+' rx='+w+' ry='+h+' style='+st+' /></svg> ';
+thediv208.innerHTML=thediv208.innerHTML+'<svg height='+h+' width='+w+' style="position:absolute; left:'+tx+'px; top:'+ty+'px; ">  <ellipse cx='+x+' cy='+y+' rx='+w+' ry='+h+' style='+st+' /></svg> ';
 /*
 var ell=document.createElement("svg");
 var a="1000";
