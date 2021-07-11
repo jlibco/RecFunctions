@@ -56,6 +56,9 @@ function abs(a) {
     return Math.abs(a);
 };
 
+function map(value, istart, istop, ostart, ostop) {
+      return ostart + (ostop - ostart) * ((value - istart) / (istop - istart));
+}
 function pow(a, b) {
     return Math.pow(a, b);
 };
