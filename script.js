@@ -22,6 +22,7 @@ function getId(a) {
     var b = document.getElementById(a);
     return b;
 };
+
 function getClass(a) {
     var b = document.getElementsByClassName(a);
     return b;
@@ -65,9 +66,11 @@ function pow(a) {
 function ciel(a) {
     return Math.ceil(a);
 };
+
 function sqrt(x){
 return Math.sqrt(x);    
 };
+
 function cbrt(x){
 return Math.cbrt(x);   
 };
@@ -83,7 +86,7 @@ function random(a, b) {
 
 
 function sin(angle) {
-    return Math.sin(angle));
+    return Math.sin(angle);
 };
 
 // A cosine function that converts from radians to degrees.
