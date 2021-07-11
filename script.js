@@ -14,6 +14,39 @@ this.sel[a]=b;
             jn.prototype.createVar = function(a, b) {
                 window[a] = b;
             };
+var getId=function(a){
+var b=document.getElementById(a);
+return b;
+};
+var getClass=function(a){
+var b=document.getElementsByClassName(a);
+return b;
+};
+
+var getTag=function(a){
+var b=document.getElementsByTagName(a);
+return b;
+};
+
+var getQuery=function(a){
+var b=document.querySelector(a);
+return b;
+};
+var getQueryAll=function(a){
+var b=document.querySelectorAll(a);
+return b;
+};
+
+var floor=function(a){
+return Math.floor(a);
+    
+};
+var ciel=function(a){
+return Math.ceil(a);        
+};
+var round=function(a){
+return Math.round(a);
+};
 var random=function(a,b){
 var c=b-a;
 var mr=Math.random()*c+((b+a)/2)-c/2;
