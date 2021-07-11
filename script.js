@@ -1,4 +1,3 @@
-
 var thediv208=document.createElement("div");
 function jn(a, b, c, d, e, f, g) {
     this.sel = document.querySelectorAll(a);
@@ -65,7 +64,6 @@ ell2.ry=h;
     console.log(ell2.x);
 ell2.style="fill:yellow";
     
-
 var body=document.querySelector("body");
 ell.appendChild(ell2);
 body.appendChild(ell);
