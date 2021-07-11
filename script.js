@@ -69,7 +69,7 @@ function noise(x, y, z) {
         k *= 2;
       }
       return sum;
-    }
+    
 };
 function sign(x){
  return Math.sign(x);   
