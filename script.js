@@ -49,6 +49,28 @@ function min(x) {
 function max(x) {
     return Math.max(x);
 };
+function noise(x, y, z) {
+      if(noiseProfile.generator === undefined) {
+        // caching
+        noiseProfile.generator = new PerlinNoise(noiseProfile.seed);
+      }
+      var generator = noiseProfile.generator;
+      var effect = 1, k = 1, sum = 0;
+      for(var i=0; i<noiseProfile.octaves; ++i) {
+        effect *= noiseProfile.fallout;
+        switch (arguments.length) {
+        case 1:
+          sum += effect * (1 + generator.noise1d(k*x))/2; break;
+        case 2:
+          sum += effect * (1 + generator.noise2d(k*x, k*y))/2; break;
+        case 3:
+          sum += effect * (1 + generator.noise3d(k*x, k*y, k*z))/2; break;
+        }
+        k *= 2;
+      }
+      return sum;
+    }
+};
 function sign(x){
  return Math.sign(x);   
 };
