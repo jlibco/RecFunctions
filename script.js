@@ -53,9 +53,10 @@ ell2.cx=x;
 ell2.cy=y;
 ell2.rx=w;
 ell2.ry=h;
-ell2.style="fill:yellow";
-ell.append(ell2);
-getQuery("body").append(ell);
+ell2.style="fill:yellow
+    
+ell.appendChild(ell2);
+getQuery("body").appendChild(ell);
 
 
 };
