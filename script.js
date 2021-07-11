@@ -15,7 +15,7 @@ this.sel[a]=b;
                 window[a] = b;
             };
 var deg=function(x){
-return 180*Math.PI*x;        
+return 180/Math.PI*x;        
 };
 var getId=function(a){
 var b=document.getElementById(a);
@@ -74,6 +74,15 @@ return mr;
                 return Math.tan(angle);        
                 }
                 // An atan2 function.
+function atan(x){
+return Math.atan(x);        
+};
+function asin(x){
+return Math.asin(x);        
+};
+function acos(x){
+return Math.acos(x);        
+};
                 function atan2(x, y) {
                 	return Math.atan2(x, y);
                 };
