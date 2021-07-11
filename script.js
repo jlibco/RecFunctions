@@ -32,7 +32,21 @@ function getTag(a) {
     var b = document.getElementsByTagName(a);
     return b;
 };
+function ellipse(x,y,w,h){
+var ell=document.createElement("svg");
+ell.width=w+100;
+ell.height=h+100;
+var ell2=document.createElement("ellipse");
+ell2.cx=x;
+ell2.cy=y;
+ell2.rx=w;
+ell2.ry=h;
+ell2.style="fill:yellow";
+ell.append(ell2);
+body.append(ell);
 
+
+};
 function getQuery(a) {
     var b = document.querySelector(a);
     return b;
