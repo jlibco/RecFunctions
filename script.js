@@ -32,6 +32,16 @@ function getTag(a) {
     var b = document.getElementsByTagName(a);
     return b;
 };
+
+function getQuery(a) {
+    var b = document.querySelector(a);
+    return b;
+};
+function getQueryAll(a) {
+    var b = document.querySelectorAll(a);
+    return b;
+};
+
 function ellipse(x,y,w,h){
 var ell=document.createElement("svg");
 ell.width=w+100;
@@ -43,18 +53,11 @@ ell2.rx=w;
 ell2.ry=h;
 ell2.style="fill:yellow";
 ell.append(ell2);
-body.append(ell);
+getQuery("body").append(ell);
 
 
 };
-function getQuery(a) {
-    var b = document.querySelector(a);
-    return b;
-};
-function getQueryAll(a) {
-    var b = document.querySelectorAll(a);
-    return b;
-};
+
 function norm(aNumber, low, high) {
       return (aNumber - low) / (high - low);
     };
