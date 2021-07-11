@@ -1,3 +1,5 @@
+
+var thediv208=document.createElement("div");
 function jn(a, b, c, d, e, f, g) {
     this.sel = document.querySelectorAll(a);
     jn.prototype = {
@@ -42,8 +44,14 @@ function getQueryAll(a) {
     return b;
 };
 
-function ellipse(x,y,w,h){
 
+
+
+function ellipse(x,y,w,h){
+thediv.innerHTML=thediv.innerHTML+'<svg height="300" width="3500">  <ellipse cx='+x+' cy='+y+' rx='+w+' ry='+h+' style="fill:yellow;stroke:purple;stroke-width:2" />
+</svg> 
+    ';
+/*
 var ell=document.createElement("svg");
 var a="1000";
 var b="1000";
@@ -63,7 +71,7 @@ ell2.style="fill:yellow";
 var body=document.querySelector("body");
 ell.appendChild(ell2);
 body.appendChild(ell);
-
+*/
 
 
 };
@@ -195,3 +203,5 @@ function constrain(num, min, max) {
 function dist(x1, y1, x2, y2) {
     return Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
 };
+
+getQuery("body").appendChild(thediv208);
