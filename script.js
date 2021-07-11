@@ -43,8 +43,7 @@ function getQueryAll(a) {
 };
 
 function ellipse(x,y,w,h){
-console.log(x);
-console.log(y);
+
 var ell=document.createElement("svg");
 var a="1000";
 var b="1000";
@@ -52,16 +51,19 @@ ell.width=a;
 ell.height=b;
     
 var ell2=document.createElement("ellipse");
+   console.log(x);
 ell2.cx=x;
 ell2.cy=y;
 ell2.rx=w;
 ell2.ry=h;
+    console.log(ell2.x);
 ell2.style="fill:yellow";
     
 
-var body=document.querySelector("body")
-body.appendChild(ell);
+var body=document.querySelector("body");
 ell.appendChild(ell2);
+body.appendChild(ell);
+
 
 
 };
