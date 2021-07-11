@@ -44,16 +44,16 @@ function getQueryAll(a) {
 
 function ellipse(x,y,w,h){
 var ell=document.createElement("svg");
-var a=(w+1000);
-var b=(h+1000);
+var a="1000";
+var b="1000";
 ell.width=a.toString();
 ell.height=b.toString();
     
 var ell2=document.createElement("ellipse");
-ell2.cx=x.toString();
-ell2.cy=y.toString();
-ell2.rx=w.toString();
-ell2.ry=h.toString();
+ell2.cx=x;
+ell2.cy=y;
+ell2.rx=w;
+ell2.ry=h;
 ell2.style="fill:yellow";
     
 
