@@ -73,11 +73,11 @@ body.appendChild(ell);
 };
 
 function rect(x,y,w,h,st){
-thediv208.innerHTML=thediv208.innerHTML+'<svg height='+h*2+10+' width='+w*2+10+' style="position:absolute; left:'+x+'px; top:'+y+'px; ">  <rect width='+w+' height='+h+' style='+st+' /></svg> ';
+thediv208.innerHTML=thediv208.innerHTML+'<svg height='+(h*2+10)+' width='+(w*2+10)+' style="position:absolute; left:'+x+'px; top:'+y+'px; ">  <rect width='+w+' height='+h+' style='+st+' /></svg> ';
 };
 
 function poly(x,y,w,h,p,st){
- thediv208.innerHTML=thediv208.innerHTML+'<svg height='+h*2+10+' width='+w*2+10+' style="position:absolute; left:'+x+'px; top:'+y+'px; ">  <polygon points='+p+' style='+st+' /></svg> ';
+ thediv208.innerHTML=thediv208.innerHTML+'<svg height='+(h*2+10)+' width='+(w*2+10)+' style="position:absolute; left:'+x+'px; top:'+y+'px; ">  <polygon points='+p+' style='+st+' /></svg> ';
 };
     function norm(aNumber, low, high) {
       return (aNumber - low) / (high - low);
