@@ -42,8 +42,23 @@ function getQueryAll(a) {
     var b = document.querySelectorAll(a);
     return b;
 };
+function newEle(a){
+var b=document.createElement(a);
+return b;
+};
 
+//by query
+function CopyClip(x){
+ /* Get the text field */
+  var copyText = document.querySelector(x);
 
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+};
 
 
 function ellipse(x,y,w,h,st){
