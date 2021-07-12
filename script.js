@@ -46,8 +46,8 @@ function getQueryAll(a) {
 
 
 
-function ellipse(x,y,w,h,tx,ty,st){
-thediv208.innerHTML=thediv208.innerHTML+'<svg height='+h*2+10+' width='+w*2+10+' style="position:absolute; left:'+tx+'px; top:'+ty+'px; ">  <ellipse cx='+x+' cy='+y+' rx='+w+' ry='+h+' style='+st+' /></svg> ';
+function ellipse(x,y,w,h,st){
+thediv208.innerHTML=thediv208.innerHTML+'<svg height='+y*2+10+' width='+x*2+10+' style="position:absolute; left:'+tx+'px; top:'+ty+'px; ">  <ellipse cx="0" cy="0" rx='+w+' ry='+h+' style='+st+' /></svg> ';
 /*
 var ell=document.createElement("svg");
 var a="1000";
@@ -72,8 +72,8 @@ body.appendChild(ell);
 
 };
 
-function rect(x,y,w,h,tx,ty,st){
-thediv208.innerHTML=thediv208.innerHTML+'<svg height='+h*2+10+' width='+w*2+10+' style="position:absolute; left:'+tx+'px; top:'+ty+'px; ">  <rect width='+w+' height='+h+' style='+st+' /></svg> ';
+function rect(x,y,w,h,st){
+thediv208.innerHTML=thediv208.innerHTML+'<svg height='+y*2+10+' width='+x*2+10+' style="position:absolute; left:'+tx+'px; top:'+ty+'px; ">  <rect width='+w+' height='+h+' style='+st+' /></svg> ';
 };
 
     function norm(aNumber, low, high) {
