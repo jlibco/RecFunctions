@@ -77,7 +77,9 @@ thediv208.innerHTML=thediv208.innerHTML+'<svg height='+(h*2+10)+' width='+(w*2+1
 };
 
 function poly(x,y,w,h,p,st){
- thediv208.innerHTML=thediv208.innerHTML+'<svg height='+(h*2+10)+' width='+(w*2+10)+' style="position:absolute; left:'+x+'px; top:'+y+'px; ">  <polygon points='+p+' style='+st+' /></svg> ';
+var pointsarr=p;
+var po=pointsarr.join(" ");
+ thediv208.innerHTML=thediv208.innerHTML+'<svg height='+(h*2+10)+' width='+(w*2+10)+' style="position:absolute; left:'+x+'px; top:'+y+'px; ">  <polygon points='+po+' style='+st+' /></svg> ';
 };
     function norm(aNumber, low, high) {
       return (aNumber - low) / (high - low);
