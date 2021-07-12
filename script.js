@@ -81,7 +81,7 @@ var pointsarr=p;
  var b="";
  var c="";
 for(var i=0;i<pointsarr.length;i=i+2){
-c=c+pointsarr[i]+","+pointsarar[i+1]+" ";
+c=c+pointsarr[i]+","+pointsarr[i+1]+" ";
 b=b+c;
 c="";
 }
