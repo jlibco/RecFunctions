@@ -78,8 +78,16 @@ thediv208.innerHTML=thediv208.innerHTML+'<svg height='+(h*2+10)+' width='+(w*2+1
 
 function poly(x,y,w,h,p,st){
 var pointsarr=p;
+ var b="";
+ var c="";
+for(var i=0;i<pointsarr.length;i=i+2){
+c=c+pointsarr[i]+","+pointsarar[i+1]+" ";
+b=b+c;
+c="";
+}
+   
 var po=pointsarr.join(" ");
- thediv208.innerHTML=thediv208.innerHTML+'<svg height='+(h*2+10)+' width='+(w*2+10)+' style="position:absolute; left:'+x+'px; top:'+y+'px; ">  <polygon points='+po+' style='+st+' /></svg> ';
+ thediv208.innerHTML=thediv208.innerHTML+'<svg height='+(h*2+10)+' width='+(w*2+10)+' style="position:absolute; left:'+x+'px; top:'+y+'px; ">  <polygon points='+c+' style='+st+' /></svg> ';
 };
     function norm(aNumber, low, high) {
       return (aNumber - low) / (high - low);
