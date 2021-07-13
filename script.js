@@ -231,7 +231,7 @@ function Jn(id,a, b, c, d, e, f, g) {
    
 };
 Jn.prototype.g=function(){
-    this.sel = document.querySelectorAll(a);
+
  
     return this.sel; 
 };
