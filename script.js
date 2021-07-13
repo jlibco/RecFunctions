@@ -230,6 +230,8 @@ function Jn(id,a, b, c, d, e, f, g) {
     this.texts=[];
     this.htmls=[];
    this.actions=[];
+   this.csss=[];
+    this.atts=[];
 };
 Jn.prototype.g=function(){
 this.actions.push(this.id+" g returned");
@@ -273,9 +275,13 @@ this.actions.push(this.id+" attr changed from "+x+" to "+y);
  }
   } 
   else{
-   var a=(this.sel[i])[x];
-    this.actions.push(this.id+" att returned as "+a);
-   return a;
+   this.atts=[];
+    for(var i=0;i<this.sel.length;i++){
+    this.atts.push((this.sel[i])[x]);   
+    }
+   
+    this.actions.push(this.id+" att returned as "+this.atts);
+   return this.atts;
   }
 };
 
@@ -287,9 +293,13 @@ this.actions.push(this.id+" css changed from "+x+" to "+y);
  }
  }
  else{
-    var a=(this.sel[i]).style[x];
-    this.actions.push(this.id+" css returned as "+a);
-    return a;
+     this.csss=[];
+    for(var i=0;i<this.sel.length;i++){
+    this.csss.push((this.sel[i]).style[x]);
+    }
+    
+    this.actions.push(this.id+" css returned as "+this.csss);
+    return this.csss;
  }
 };
 
