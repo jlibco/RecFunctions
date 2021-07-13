@@ -263,6 +263,12 @@ this.actions.push(this.id+" act returned");
 
 return this.actions;    
 };
+Jn.prototype.att=function(x,y){
+ for(var i=0;i<this.sel.length;i++){
+(this.sel[i])[x]=y;
+ }
+
+};
 
 
 var jnId=function(x){
