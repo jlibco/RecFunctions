@@ -257,6 +257,7 @@ if(id===jns[i].id){
 useable=false;
 }
 }
+    
 if(useable===true){
 jns.push(new Jn(id,a,b,c));
 jntarget=jnId(id);
@@ -264,6 +265,7 @@ jntarget=jnId(id);
 else if(useable===false){
 jntarget=jnId(id);    
 }
+console.log(jns[jntarget]);
 return jns[jntarget];
 };
 
