@@ -228,9 +228,13 @@ function Jn(id,a, b, c, d, e, f, g) {
     this.id=id;
     this.sel = document.querySelectorAll(a);
  
-    return this.sel;
+   
 };
-
+Jn.prototype.g=function(){
+    this.sel = document.querySelectorAll(a);
+ 
+    return this.sel; 
+};
 
 
 Jn.prototype.con=function(){
