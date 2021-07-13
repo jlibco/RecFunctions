@@ -241,11 +241,14 @@ console.log("Yey");
 
 
 var jnId=function(x){
+var a="not def";
 for(var i=0;i<jns.length;i++){
 if(x===jns[i].id){
-return i;    
+a=i;    
 }
 }
+console.log("B"+a);
+return a;
 };
 
 
