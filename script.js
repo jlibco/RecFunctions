@@ -222,6 +222,15 @@ function dist(x1, y1, x2, y2) {
 getQuery("body").appendChild(thediv208);
 var Jn;
 var jn;
+var jnId;
+
+var jnId=function(x){
+for(var i=0;i<jn.length;i++){
+if(x===jn[i].id){
+return i;    
+}
+}
+};
 
 
 
@@ -245,7 +254,7 @@ return jns[jntarget];
 function Jn(id,a, b, c, d, e, f, g) {
     this.id=id;
     this.sel = document.querySelectorAll(a);
- //   jnFind(id,a,b,c);
+ 
     return this.sel;
 };
 
@@ -253,13 +262,6 @@ function Jn(id,a, b, c, d, e, f, g) {
 
 Jn.prototype.createVar = function(a, b) {
     window[a] = b;
-};
-var jnId=function(x){
-for(var i=0;i<jn.length;i++){
-if(x===jn[i].id){
-return i;    
-}
-}
 };
 
 
