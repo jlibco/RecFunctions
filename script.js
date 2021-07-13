@@ -227,13 +227,20 @@ var jnId;
 function Jn(id,a, b, c, d, e, f, g) {
     this.id=id;
     this.sel = document.querySelectorAll(a);
- 
+    this.texts=[];
    
 };
 Jn.prototype.g=function(){
 
  
     return this.sel; 
+};
+Jn.prototype.text=function(){
+this.texts=[];
+for(var i=0;i<this.sel.length;i++){
+this.texts.push(this.sel[i].textContent);
+}
+return texts;
 };
 
 
