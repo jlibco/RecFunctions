@@ -223,6 +223,7 @@ getQuery("body").appendChild(thediv208);
 var Jn;
 var jn;
 var jnId;
+
 function Jn(id,a, b, c, d, e, f, g) {
     this.id=id;
     this.sel = document.querySelectorAll(a);
@@ -232,8 +233,10 @@ function Jn(id,a, b, c, d, e, f, g) {
 
 
 
-Jn.prototype.createVar = function(a, b) {
-    window[a] = b;
+Jn.prototype.con=function(){
+console.log("Yey");
+
+   
 };
 
 
@@ -258,7 +261,7 @@ if(useable===true){
 jns.push(new Jn(id,a,b,c));
 jntarget=jnId(id);
 }
-else{
+else if(useable===false){
 jntarget=jnId(id);    
 }
 return jns[jntarget];
