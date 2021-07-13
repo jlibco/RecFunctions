@@ -241,14 +241,14 @@ this.texts=[];
 for(var i=0;i<this.sel.length;i++){
 this.texts.push(this.sel[i].textContent);
 }
-this.actions.push(this.id+" text returned");
+this.actions.push(this.id+" text returned as "+this.texts;
 return this.texts;
 }
 else if(x!==undefined){
 for(var i=0;i<this.sel.length;i++){
 this.sel[i].textContent=x;
 }
-this.actions.push(this.id+" text changed");
+this.actions.push(this.id+" text changed to do with "+x);
 }
 };
 
@@ -259,12 +259,12 @@ console.log("Yey");
    
 };
 Jn.prototype.act=function(){
-this.actions.push(this.id+" act returned");
+this.actions.push(this.id+" act returned ");
 
 return this.actions;    
 };
 Jn.prototype.att=function(x,y){
-this.actions.push(this.id+" attr changed");
+this.actions.push(this.id+" attr changed from "+x+" to "+y);
     
  for(var i=0;i<this.sel.length;i++){
 (this.sel[i])[x]=y;
@@ -272,7 +272,7 @@ this.actions.push(this.id+" attr changed");
 
 };
 Jn.prototype.css=function(x,y){
-this.actions.push(this.id+" css changed");    
+this.actions.push(this.id+" css changed from "+x+" to "+y);    
  for(var i=0;i<this.sel.length;i++){
  (this.sel[i]).style[x]=y;    
  }
