@@ -245,7 +245,7 @@ return jns[jntarget];
 function Jn(id,a, b, c, d, e, f, g) {
     this.id=id;
     this.sel = document.querySelectorAll(a);
-    jnFind(id,a,b,c);
+ //   jnFind(id,a,b,c);
     return this.sel;
 };
 
