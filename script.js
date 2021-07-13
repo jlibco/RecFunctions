@@ -241,7 +241,7 @@ this.texts=[];
 for(var i=0;i<this.sel.length;i++){
 this.texts.push(this.sel[i].textContent);
 }
-this.actions.push(this.id+" text returned as "+this.texts;
+this.actions.push(this.id+" text returned as "+this.texts);
 return this.texts;
 }
 else if(x!==undefined){
