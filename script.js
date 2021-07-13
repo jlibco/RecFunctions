@@ -1,20 +1,7 @@
 var thediv208=document.createElement("div");
-function jn(a, b, c, d, e, f, g) {
-    this.sel = document.querySelectorAll(a);
-    jn.prototype = {
-        ad: function(a, b) {
-
-            this.sel[a] = b;
-        },
-    };
-    return this.sel;
-};
+var jns=[];
 
 
-
-jn.prototype.createVar = function(a, b) {
-    window[a] = b;
-};
 function deg(x) {
     return 180 / Math.PI * x;
 };
@@ -233,3 +220,46 @@ function dist(x1, y1, x2, y2) {
 };
 
 getQuery("body").appendChild(thediv208);
+
+function Jn(id,a, b, c, d, e, f, g) {
+    this.id=id;
+    this.sel = document.querySelectorAll(a);
+    jn.prototype = {
+        ad: function(a, b) {
+
+            this.sel[a] = b;
+        },
+    };
+    return this.sel;
+};
+
+
+
+Jn.prototype.createVar = function(a, b) {
+    window[a] = b;
+};
+var jnId=function(x){
+for(var i=0;i<jn.length;i++){
+if(x===jn[i].id){
+return i;    
+}
+}
+};
+var jn=function(id,a,b,c){
+ var useable=true;
+for(var i=0;i<jns.length;i++){
+if(id===jns[i].id){
+useable=false;
+}
+
+ 
+}
+if(useable===true){
+jns.push(new Jn(a,b,c));
+}
+else{
+jns[jnId(id)];    
+}
+};
+
+
