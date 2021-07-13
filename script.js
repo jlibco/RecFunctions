@@ -280,20 +280,7 @@ this.actions.push(this.id+" css changed from "+x+" to "+y);
 };
 
 
-var jnId=function(x){
-    
-// console.log("D"+jns);
-var a="not def";
-for(var i=0;i<jns.length;i++){
-if(x===jns[i].id){
-a=i;    
-}
-}
-//console.log("B"+a);
-return a;
-};
-
-Jn.prototype.html=function(){
+Jn.prototype.html=function(x){
 if(x===undefined){
 this.htmls=[];
 for(var i=0;i<this.sel.length;i++){
@@ -310,6 +297,20 @@ this.actions.push(this.id+" html changed to do with "+x);
 }
 
 };
+
+var jnId=function(x){
+    
+// console.log("D"+jns);
+var a="not def";
+for(var i=0;i<jns.length;i++){
+if(x===jns[i].id){
+a=i;    
+}
+}
+//console.log("B"+a);
+return a;
+};
+
 
 var jn=function(id,a,b,c){
  var useable=true;
