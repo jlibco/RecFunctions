@@ -1,6 +1,6 @@
 var thediv208=document.createElement("div");
 var jns=[];
-
+var jntarget=-1;
 
 function deg(x) {
     return 180 / Math.PI * x;
@@ -220,16 +220,32 @@ function dist(x1, y1, x2, y2) {
 };
 
 getQuery("body").appendChild(thediv208);
+var Jn;
+var jn;
+
+
+
+var jn=function(id,a,b,c){
+ var useable=true;
+for(var i=0;i<jns.length;i++){
+if(id===jns[i].id){
+useable=false;
+}
+}
+if(useable===true){
+jns.push(new Jn(id,a,b,c));
+jntarget=jnId(id);
+}
+else{
+jntarget=jnId(id);    
+}
+return jns[jntarget];
+};
 
 function Jn(id,a, b, c, d, e, f, g) {
     this.id=id;
     this.sel = document.querySelectorAll(a);
-    jn.prototype = {
-        ad: function(a, b) {
-
-            this.sel[a] = b;
-        },
-    };
+    jnFind(id,a,b,c);
     return this.sel;
 };
 
@@ -245,21 +261,8 @@ return i;
 }
 }
 };
-var jn=function(id,a,b,c){
- var useable=true;
-for(var i=0;i<jns.length;i++){
-if(id===jns[i].id){
-useable=false;
-}
 
- 
-}
-if(useable===true){
-jns.push(new Jn(a,b,c));
-}
-else{
-jns[jnId(id)];    
-}
-};
+
+
 
 
