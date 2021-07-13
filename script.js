@@ -265,17 +265,31 @@ this.actions.push(this.id+" act returned ");
 return this.actions;    
 };
 Jn.prototype.att=function(x,y){
+  if(y!==undefined){
 this.actions.push(this.id+" attr changed from "+x+" to "+y);
     
  for(var i=0;i<this.sel.length;i++){
 (this.sel[i])[x]=y;
  }
-
+  } 
+  else{
+   var a=(this.sel[i])[x];
+    this.actions.push(this.id+" att returned as "+a);
+   return a;
+  }
 };
+
 Jn.prototype.css=function(x,y){
+ if(y!==undefined){
 this.actions.push(this.id+" css changed from "+x+" to "+y);    
  for(var i=0;i<this.sel.length;i++){
  (this.sel[i]).style[x]=y;    
+ }
+ }
+ else{
+    var a=(this.sel[i]).style[x];
+    this.actions.push(this.id+" css returned as "+a);
+    return a;
  }
 };
 
