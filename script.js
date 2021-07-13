@@ -240,7 +240,7 @@ this.texts=[];
 for(var i=0;i<this.sel.length;i++){
 this.texts.push(this.sel[i].textContent);
 }
-return texts;
+return this.texts;
 };
 
 
