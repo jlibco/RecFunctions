@@ -266,6 +266,7 @@ else if(useable===false){
 jntarget=jnId(id);    
 }
 console.log(jns[jntarget]);
+console.log(jntarget);
 return jns[jntarget];
 };
 
