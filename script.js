@@ -241,6 +241,8 @@ console.log("Yey");
 
 
 var jnId=function(x){
+    
+ console.log("D"+jns);
 var a="not def";
 for(var i=0;i<jns.length;i++){
 if(x===jns[i].id){
