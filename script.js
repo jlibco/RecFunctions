@@ -235,12 +235,19 @@ Jn.prototype.g=function(){
  
     return this.sel; 
 };
-Jn.prototype.text=function(){
+Jn.prototype.text=function(x){
+if(x===undefined){
 this.texts=[];
 for(var i=0;i<this.sel.length;i++){
 this.texts.push(this.sel[i].textContent);
 }
 return this.texts;
+}
+else if(x!==undefined){
+for(var i=0;i<this.sel.length;i++){
+this.sel[i].textContent=x;
+}
+}
 };
 
 
@@ -253,14 +260,14 @@ console.log("Yey");
 
 var jnId=function(x){
     
- console.log("D"+jns);
+// console.log("D"+jns);
 var a="not def";
 for(var i=0;i<jns.length;i++){
 if(x===jns[i].id){
 a=i;    
 }
 }
-console.log("B"+a);
+//console.log("B"+a);
 return a;
 };
 
@@ -281,8 +288,8 @@ jntarget=jnId(id);
 else if(useable===false){
 jntarget=jnId(id);    
 }
-console.log(jns[jntarget]);
-console.log(jntarget);
+//console.log(jns[jntarget]);
+//console.log(jntarget);
 return jns[jntarget];
 };
 
