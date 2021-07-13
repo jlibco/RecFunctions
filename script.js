@@ -228,6 +228,7 @@ function Jn(id,a, b, c, d, e, f, g) {
     this.id=id;
     this.sel = document.querySelectorAll(a);
     this.texts=[];
+    this.htmls=[];
    this.actions=[];
 };
 Jn.prototype.g=function(){
@@ -292,7 +293,23 @@ a=i;
 return a;
 };
 
+Jn.prototype.html=function(){
+if(x===undefined){
+this.htmls=[];
+for(var i=0;i<this.sel.length;i++){
+this.htmls.push(this.sel[i].innerHTML);
+}
+this.actions.push(this.id+" html returned as "+this.htmls);
+return this.htmls;
+}
+else if(x!==undefined){
+for(var i=0;i<this.sel.length;i++){
+this.sel[i].innerHTML=x;
+}
+this.actions.push(this.id+" html changed to do with "+x);
+}
 
+};
 
 var jn=function(id,a,b,c){
  var useable=true;
