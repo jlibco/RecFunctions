@@ -238,7 +238,7 @@ Jn.prototype.createVar = function(a, b) {
 
 
 var jnId=function(x){
-for(var i=0;i<jn.length;i++){
+for(var i=0;i<jns.length;i++){
 if(x===jns[i].id){
 return i;    
 }
