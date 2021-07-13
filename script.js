@@ -228,10 +228,10 @@ function Jn(id,a, b, c, d, e, f, g) {
     this.id=id;
     this.sel = document.querySelectorAll(a);
     this.texts=[];
-   
+   this.actions=[];
 };
 Jn.prototype.g=function(){
-
+this.actions.push(this.id+" g returned");
  
     return this.sel; 
 };
@@ -241,12 +241,14 @@ this.texts=[];
 for(var i=0;i<this.sel.length;i++){
 this.texts.push(this.sel[i].textContent);
 }
+this.actions.push(this.id+"text returned");
 return this.texts;
 }
 else if(x!==undefined){
 for(var i=0;i<this.sel.length;i++){
 this.sel[i].textContent=x;
 }
+this.actions.push(this.id+"text changed");
 }
 };
 
@@ -255,6 +257,11 @@ Jn.prototype.con=function(){
 console.log("Yey");
 
    
+};
+Jn.prototype.act=function(){
+this.actions.push(this.id+"act returned");
+
+return this.actions;    
 };
 
 
