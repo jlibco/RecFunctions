@@ -241,14 +241,14 @@ this.texts=[];
 for(var i=0;i<this.sel.length;i++){
 this.texts.push(this.sel[i].textContent);
 }
-this.actions.push(this.id+"text returned");
+this.actions.push(this.id+" text returned");
 return this.texts;
 }
 else if(x!==undefined){
 for(var i=0;i<this.sel.length;i++){
 this.sel[i].textContent=x;
 }
-this.actions.push(this.id+"text changed");
+this.actions.push(this.id+" text changed");
 }
 };
 
@@ -259,7 +259,7 @@ console.log("Yey");
    
 };
 Jn.prototype.act=function(){
-this.actions.push(this.id+"act returned");
+this.actions.push(this.id+" act returned");
 
 return this.actions;    
 };
