@@ -223,6 +223,18 @@ getQuery("body").appendChild(thediv208);
 var Jn;
 var jn;
 var jnId;
+function Jn(id,a, b, c, d, e, f, g) {
+    this.id=id;
+    this.sel = document.querySelectorAll(a);
+ 
+    return this.sel;
+};
+
+
+
+Jn.prototype.createVar = function(a, b) {
+    window[a] = b;
+};
 
 
 var jnId=function(x){
@@ -252,18 +264,7 @@ jntarget=jnId(id);
 return jns[jntarget];
 };
 
-function Jn(id,a, b, c, d, e, f, g) {
-    this.id=id;
-    this.sel = document.querySelectorAll(a);
- 
-    return this.sel;
-};
 
-
-
-Jn.prototype.createVar = function(a, b) {
-    window[a] = b;
-};
 
 
 
