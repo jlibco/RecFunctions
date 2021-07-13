@@ -264,10 +264,18 @@ this.actions.push(this.id+" act returned");
 return this.actions;    
 };
 Jn.prototype.att=function(x,y){
+this.actions.push(this.id+" attr changed");
+    
  for(var i=0;i<this.sel.length;i++){
 (this.sel[i])[x]=y;
  }
 
+};
+Jn.prototype.css=function(x,y){
+this.actions.push(this.id+" css changed");    
+ for(var i=0;i<this.sel.length;i++){
+ (this.sel[i]).style[x]=y;    
+ }
 };
 
 
