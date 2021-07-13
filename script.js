@@ -233,11 +233,13 @@ function Jn(id,a, b, c, d, e, f, g) {
    this.csss=[];
     this.atts=[];
 };
+
 Jn.prototype.g=function(){
 this.actions.push(this.id+" g returned");
  
     return this.sel; 
 };
+
 Jn.prototype.text=function(x){
 if(x===undefined){
 this.texts=[];
