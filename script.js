@@ -236,8 +236,12 @@ function Jn(id,a, b, c, d, e, f, g) {
 
 Jn.prototype.g=function(){
 this.actions.push(this.id+" g returned");
- 
-    return this.sel; 
+    if(a[0]==="#"){
+   return this.sel[0];      
+    }
+    else{
+    return this.sel;     
+    }
 };
 
 Jn.prototype.text=function(x){
