@@ -232,11 +232,12 @@ function Jn(id,a, b, c, d, e, f, g) {
    this.actions=[];
    this.csss=[];
     this.atts=[];
+    this.a=a;
 };
 
 Jn.prototype.g=function(){
 this.actions.push(this.id+" g returned");
-    if(a[0]==="#"){
+    if(this.a[0]==="#"){
    return this.sel[0];      
     }
     else{
