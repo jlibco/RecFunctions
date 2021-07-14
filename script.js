@@ -262,7 +262,10 @@ this.actions.push(this.id+" text changed to do with "+x);
 }
 };
 
-
+Jn.prototype.eventL=function(x,y){
+this.sel.addEventListener(x,y);
+this.actions.push(this.id+" eventlistener added ");
+};
 Jn.prototype.con=function(){
 console.log("Yey");
 
@@ -291,7 +294,6 @@ this.actions.push(this.id+" attr changed from "+x+" to "+y);
    return this.atts;
   }
 };
-
 Jn.prototype.css=function(x,y){
  if(y!==undefined){
 this.actions.push(this.id+" css changed from "+x+" to "+y);    
