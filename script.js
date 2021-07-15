@@ -239,8 +239,8 @@ function dist(x1, y1, x2, y2) {
 
 
 var newPjs=function(x,processjs208){
-        var canvas = document.getElementById(x);
-        var processing = new Processing(canvas, function(processing) {
+        var canvas111 = document.getElementById(x);
+        var processing = new Processing(canvas111, function(processing) {
           //  processing.size(400, 400);
             processing.background(0xFFF);
     
@@ -263,8 +263,7 @@ var newPjs=function(x,processjs208){
                 
                 // INSERT YOUR KHAN ACADEMY PROGRAM HERE
                 processjs208();
-                fill(255, 0, 0);
-                text("hi",50,50);
+           
                 
                 
             }
