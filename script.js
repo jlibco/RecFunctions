@@ -1,3 +1,9 @@
+var scr=document.createElement("script");
+scr.src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js";
+document.body.appendChild(scr);
+
+
+
 var thediv208=document.createElement("div");
 var jns=[];
 var jntarget=-1;
@@ -218,6 +224,23 @@ function constrain(num, min, max) {
 function dist(x1, y1, x2, y2) {
     return Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
 };
+
+ var pjsNew=function(x,use){
+    if(getId("x") && getTag("canvas")[0]!==undefined)
+  var programCode = function(processingInstance) {
+    with (processingInstance) {
+      
+      use();
+    }};
+
+  // Get the canvas that ProcessingJS will use
+  var canvas = document.getElementById(x); 
+  // Pass the function to ProcessingJS constructor
+  var processingInstance = new Processing(canvas, programCode);
+  
+      
+  };
+
 
 getQuery("body").appendChild(thediv208);
 var Jn;
