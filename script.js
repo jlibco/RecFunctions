@@ -231,16 +231,16 @@ function dist(x1, y1, x2, y2) {
     with (processingInstance) {
      // size(400, 400); 
       use();
-      frameRate(30);
+      
         
       // Paste code from Khan Academy here:
       
     }};
 
   // Get the canvas that ProcessingJS will use
-  var canvas = document.getElementById(x); 
+  var canvas1111 = document.getElementById(x); 
   // Pass the function to ProcessingJS constructor
-  var processingInstance = new Processing(canvas, programCode);
+  var processingInstance = new Processing(canvas1111, programCode);
   
       
   };
