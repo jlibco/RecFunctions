@@ -238,27 +238,39 @@ function dist(x1, y1, x2, y2) {
 };
 
 
-var pjsNew = function(x, use1) {
-
-    var programCode = function(processingInstance) {
-        with(processingInstance) {
-            // size(400, 400); 
-            use1();
-
-
-            // Paste code from Khan Academy here:
-
-        }
+var newPjs=function(x,processjs208){
+        var canvas = document.getElementById(x);
+        var processing = new Processing(canvas, function(processing) {
+          //  processing.size(400, 400);
+            processing.background(0xFFF);
+    
+            var mouseIsPressed = false;
+            processing.mousePressed = function () { mouseIsPressed = true; };
+            processing.mouseReleased = function () { mouseIsPressed = false; };
+    
+            var keyIsPressed = false;
+            processing.keyPressed = function () { keyIsPressed = true; };
+            processing.keyReleased = function () { keyIsPressed = false; };
+    
+            function getImage(s) {
+                var url = "https://www.kasandbox.org/programming-images/" + s + ".png";
+                processing.externals.sketch.imageCache.add(url);
+                return processing.loadImage(url);
+            }
+    
+            with (processing) {
+                
+                
+                // INSERT YOUR KHAN ACADEMY PROGRAM HERE
+                processjs208();
+                fill(255, 0, 0);
+                text("hi",50,50);
+                
+                
+            }
+            if (typeof draw !== 'undefined') processing.draw = draw;
+        });
     };
-
-    // Get the canvas that ProcessingJS will use
-    var canvas1111 = document.getElementById(x);
-    // Pass the function to ProcessingJS constructor
-    var processingInstance = new Processing(canvas1111, programCode);
-
-
-};
-
 getQuery("body").appendChild(thediv208);
 var Jn;
 var jn;
