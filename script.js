@@ -53,7 +53,7 @@ function CopyClip(x) {
 };
 
 
-function ellipse(x, y, w, h, st) {
+function sEllipse(x, y, w, h, st) {
     thediv208.innerHTML = thediv208.innerHTML + '<svg height=' + h * 2 + 10 + ' width=' + w * 2 + 10 + ' style="position:absolute; left:' + x + 'px; top:' + y + 'px; ">  <ellipse cx="0" cy="0" rx=' + w + ' ry=' + h + ' style=' + st + ' /></svg> ';
     /*
     var ell=document.createElement("svg");
@@ -79,11 +79,11 @@ function ellipse(x, y, w, h, st) {
 
 };
 
-function rect(x, y, w, h, st) {
+function sRect(x, y, w, h, st) {
     thediv208.innerHTML = thediv208.innerHTML + '<svg height=' + (h * 2 + 10) + ' width=' + (w * 2 + 10) + ' style="position:absolute; left:' + x + 'px; top:' + y + 'px; ">  <rect width=' + w + ' height=' + h + ' style=' + st + ' /></svg> ';
 };
 
-function poly(x, y, w, h, p, st) {
+function sPoly(x, y, w, h, p, st) {
     var pointsarr = p;
     var b = "";
     var c = "";
