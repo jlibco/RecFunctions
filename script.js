@@ -226,7 +226,7 @@ function dist(x1, y1, x2, y2) {
 };
 
  var pjsNew=function(x,use){
-    if(getId("x") && getTag("canvas")[0]!==undefined)
+   
   var programCode = function(processingInstance) {
     with (processingInstance) {
       
