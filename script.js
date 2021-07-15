@@ -226,11 +226,15 @@ function dist(x1, y1, x2, y2) {
 };
 
  var pjsNew=function(x,use){
-   
+    
   var programCode = function(processingInstance) {
     with (processingInstance) {
-      
+     // size(400, 400); 
       use();
+      frameRate(30);
+        
+      // Paste code from Khan Academy here:
+      
     }};
 
   // Get the canvas that ProcessingJS will use
@@ -240,7 +244,6 @@ function dist(x1, y1, x2, y2) {
   
       
   };
-
 
 getQuery("body").appendChild(thediv208);
 var Jn;
