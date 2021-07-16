@@ -336,6 +336,43 @@ var rand=[];
     
     
 };
+var Decode=function(x){
+var b="";
+    var input1=x;
+    var div1=document.getElementById("mydiv");
+    var input1val=input1;
+    var input1valc=input1val;
+    
+    var a=input1valc.split("/");
+    for(var i=0;i<a.length;i++){
+    if(i===a.length-1){
+    continue;
+    }
+    
+    var b=a[i][0];
+    
+    b=b.charCodeAt(0);
+    
+   var c=a[i];
+   c=c.toString();
+   
+   c=c.replace(new RegExp("(.@|.!)","g"),"");
+    //c=c.replace(/~/g,"");
+  
+   //console.log(parseInt(c));
+   
+    b=parseInt(b)-parseInt(a[a.length-1])-parseInt(c);
+    //console.log(b);
+    b=String.fromCharCode(b);
+    
+    a[i]=b;
+    }
+    a.splice(a.length-1,1);
+    a=a.join('');
+    
+   return a;
+        
+};
 
 var newPjs=function(x,processjs208){
         var canvas111 = document.getElementById(x);
