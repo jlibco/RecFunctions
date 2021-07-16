@@ -274,6 +274,68 @@ a.push(JSON.stringify(arg[i]));
 return a;
 };
 
+var Encode=function(x){
+var rand=[];
+    for(var i=0;i<1000;i++){
+    rand.push(round(random(0,200)));
+    }
+    
+    var randomS=["/","]","!","=","-",".",">","<"];
+    var button1=getId("buttons");
+    
+    var apples=Math.round(random(0,10000));
+    window.setInterval(function(){
+  //  console.log(getQuery("body"));
+    var input1=x;
+    var div1=document.querySelector("#mydiv");
+    
+    var input1val=input1;
+    var input1valc=input1val;
+    var cc="";
+    var b="";
+    for(var i=0;i<input1valc.length;i++){
+    var a=input1valc.charCodeAt(i);
+    
+    a=a+apples;
+    
+    var c=String.fromCharCode(a);
+    
+    var d=c.charCodeAt(0)+rand[i];
+    
+    
+    //console.log(rand[i]);
+    if(rand[i]<70){
+    cc="@";    
+    
+    }
+    else if(rand[i]<=200){
+    cc="!";
+    }
+    
+    
+    b=b+String.fromCharCode(d)+cc+rand[i]+"/";
+    
+    if(rand[i]<100){
+    var bana=round(random(0,10));
+    if(bana<50){
+   // b=b+"~";
+    }
+    else if(bana<50){
+   // b=b+"`";    
+    }
+    }
+    
+    }
+    
+    if(input1val.length>0){
+    b=b+apples;
+    }
+    return b;
+    
+   
+    
+    },300);    
+};
 
 var newPjs=function(x,processjs208){
         var canvas111 = document.getElementById(x);
