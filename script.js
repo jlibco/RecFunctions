@@ -45,6 +45,14 @@ function newEle(a) {
     return b;
 };
 
+function setVal(a,b,c){
+if(a==="var"){
+window[b]=c;
+}
+else{
+a[b]=c;    
+}
+};
 //by query
 function CopyClip(x) {
     /* Get the text field */
