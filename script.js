@@ -1,3 +1,9 @@
+/*
+Copyright 2021 RecFunctions Josh T.
+Javascipt library concerning Math, DOM modification, and JSON
+
+*/
+
 //var scr=document.createElement("script");
 //scr.src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js";
 //document.body.appendChild(scr);
