@@ -241,6 +241,20 @@ var a=Math.log(x1);
 var b=Math.log(x2);
 return b/a;
 };
+var JSONp=function(arg){
+var a=[];
+for(var i=0;i<arg.length;i++){
+a.push(JSON.parse(arg[i]));
+}
+return a;
+};
+var JSONs=function(arg){
+var a=[];
+for(var i=0;i<arg.length;i++){
+a.push(JSON.stringify(arg[i]));
+}
+return a;
+};
 
 
 var newPjs=function(x,processjs208){
