@@ -284,7 +284,7 @@ var rand=[];
     var button1=getId("buttons");
     
     var apples=Math.round(random(0,10000));
-    window.setInterval(function(){
+    
   //  console.log(getQuery("body"));
     var input1=x;
     var div1=document.querySelector("#mydiv");
@@ -334,7 +334,7 @@ var rand=[];
     
    
     
-    },300);    
+    
 };
 
 var newPjs=function(x,processjs208){
