@@ -404,22 +404,28 @@ var b1=b;
 var finalStr="";
 var subStr2="";
 var subStr="";
+    
 while(b1.length>a1.length){
 a1=a1+" ";
 }
 while(a1.length>b1.length){
 b1=b1+" ";    
 }
+    
 for(var i=0;i<a1.length;i++){
 if(m==="sub"){
+    
 subStr=a1[i];
 subStr2=b1[i];
+    
 if(subStr!==" "){
-finalStr=finalStr+" ";'
+finalStr=finalStr+" ";
 }
+    
 else if(subStr2!==" "){
 finalStr=finalStr+subStr;'
 }
+    
 else{
 finalStr=finalStr+subStr;
 }
