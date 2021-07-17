@@ -392,6 +392,7 @@ function getRoot(a) {
 function setRoot(a,b) {
   // Set the value of variable --blue to another value (in this case "lightblue")
   root208.style.setProperty(a, b);
+    return b;
 };
 
 
