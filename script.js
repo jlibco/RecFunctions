@@ -395,10 +395,9 @@ function setRoot(a,b) {
     return b;
 };
 
-var extraStyles=function(){
+
 setRoot("--darkblue","rgb(0, 10, 122);");    
-};
-extraStyles();
+
 
 
 
