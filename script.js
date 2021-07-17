@@ -421,10 +421,13 @@ else if(subStr2!==" "){
 finalStr=finalStr+subStr;'
 }
 else{
-finalString=finalString+" ";
+finalStr=finalStr+subStr;
 }
     
+subStr="";
+subStr2="";
 }
+return finalStr;    
 }
 };
 
