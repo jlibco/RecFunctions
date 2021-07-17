@@ -396,7 +396,7 @@ function setRoot(a,b) {
 };
 
 
-setRoot("--darkblue","rgb(0, 10, 122);");    
+setRoot("--darkblue","rgb(0, 10, 122)");    
 
 
 
