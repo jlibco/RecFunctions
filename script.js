@@ -412,17 +412,17 @@ while(a1.length>b1.length){
 b1=b1+" ";    
 }
     
-for(var i=0;i<a1.length;i++){
+
 if(m==="sub"){
-    
+for(var i=0;i<a1.length;i++){    
 subStr=a1[i];
 subStr2=b1[i];
     
-if(subStr!==" "){
+if(subStr===" "){
 finalStr=finalStr+" ";
 }
     
-else if(subStr2!==" "){
+else if(subStr2===" "){
 finalStr=finalStr+subStr;
 }
     
@@ -433,9 +433,9 @@ finalStr=finalStr+subStr;
 subStr="";
 subStr2="";
 }
-   
+ return finalStr;   
 }
-    return finalStr; 
+    
 };
 
 
