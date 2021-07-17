@@ -423,7 +423,7 @@ finalStr=finalStr+" ";
 }
     
 else if(subStr2!==" "){
-finalStr=finalStr+subStr;'
+finalStr=finalStr+subStr;
 }
     
 else{
