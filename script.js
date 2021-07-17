@@ -1,6 +1,6 @@
 /*
 Copyright 2021 RecFunctions Josh T.
-Javascipt library concerning Math, DOM modification, and JSON
+Javascipt library concerning Math, DOM modification, and JSON, and css vars.
 
 */
 
@@ -373,6 +373,32 @@ var b="";
    return a;
         
 };
+
+
+
+
+// Get the root element
+var root208 = document.querySelector(':root');
+
+// Create a function for getting a variable value
+function getRoot(a) {
+  // Get the styles (properties and values) for the root
+  var rs = getComputedStyle(root208);
+  // Alert the value of the --blue variable
+  return rs.getPropertyValue(a);
+};
+
+// Create a function for setting a variable value
+function setRoot(a,b) {
+  // Set the value of variable --blue to another value (in this case "lightblue")
+  root208.style.setProperty(a, b);
+};
+
+
+
+
+
+
 
 var newPjs=function(x,processjs208){
         var canvas111 = document.getElementById(x);
