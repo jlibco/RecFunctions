@@ -49,13 +49,12 @@ function newEle(a) {
     return b;
 };
 
-function setVal(a,b,c){
-if(a==="var"){
-window[b]=c;
-}
-else{
-a[b]=c;    
-}
+function setVal(a, b, c) {
+    if (a === "var") {
+        window[b] = c;
+    } else {
+        a[b] = c;
+    }
 };
 //by query
 function CopyClip(x) {
@@ -254,124 +253,123 @@ function constrain(num, min, max) {
 function dist(x1, y1, x2, y2) {
     return Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
 };
-function log(x1,x2){
-var a=Math.log(x1);
-var b=Math.log(x2);
-return b/a;
+
+function log(x1, x2) {
+    var a = Math.log(x1);
+    var b = Math.log(x2);
+    return b / a;
 };
-var JSONp=function(arg){
-var a=[];
-for(var i=0;i<arg.length;i++){
-a.push(JSON.parse(arg[i]));
-}
-return a;
+var JSONp = function(arg) {
+    var a = [];
+    for (var i = 0; i < arg.length; i++) {
+        a.push(JSON.parse(arg[i]));
+    }
+    return a;
 };
-var JSONs=function(arg){
-var a=[];
-for(var i=0;i<arg.length;i++){
-a.push(JSON.stringify(arg[i]));
-}
-return a;
+var JSONs = function(arg) {
+    var a = [];
+    for (var i = 0; i < arg.length; i++) {
+        a.push(JSON.stringify(arg[i]));
+    }
+    return a;
 };
 
-var Encode=function(x){
-var rand=[];
-    for(var i=0;i<1000;i++){
-    rand.push(round(random(0,200)));
+var Encode = function(x) {
+    var rand = [];
+    for (var i = 0; i < 1000; i++) {
+        rand.push(round(random(0, 200)));
     }
-    
-    var randomS=["/","]","!","=","-",".",">","<"];
-    var button1=getId("buttons");
-    
-    var apples=Math.round(random(0,10000));
-    
-  //  console.log(getQuery("body"));
-    var input1=x;
-    var div1=document.querySelector("#mydiv");
-    
-    var input1val=input1;
-    var input1valc=input1val;
-    var cc="";
-    var b="";
-    for(var i=0;i<input1valc.length;i++){
-    var a=input1valc.charCodeAt(i);
-    
-    a=a+apples;
-    
-    var c=String.fromCharCode(a);
-    
-    var d=c.charCodeAt(0)+rand[i];
-    
-    
-    //console.log(rand[i]);
-    if(rand[i]<70){
-    cc="@";    
-    
+
+    var randomS = ["/", "]", "!", "=", "-", ".", ">", "<"];
+    var button1 = getId("buttons");
+
+    var apples = Math.round(random(0, 10000));
+
+    //  console.log(getQuery("body"));
+    var input1 = x;
+    var div1 = document.querySelector("#mydiv");
+
+    var input1val = input1;
+    var input1valc = input1val;
+    var cc = "";
+    var b = "";
+    for (var i = 0; i < input1valc.length; i++) {
+        var a = input1valc.charCodeAt(i);
+
+        a = a + apples;
+
+        var c = String.fromCharCode(a);
+
+        var d = c.charCodeAt(0) + rand[i];
+
+
+        //console.log(rand[i]);
+        if (rand[i] < 70) {
+            cc = "@";
+
+        } else if (rand[i] <= 200) {
+            cc = "!";
+        }
+
+
+        b = b + String.fromCharCode(d) + cc + rand[i] + "/";
+
+        if (rand[i] < 100) {
+            var bana = round(random(0, 10));
+            if (bana < 50) {
+                // b=b+"~";
+            } else if (bana < 50) {
+                // b=b+"`";    
+            }
+        }
+
     }
-    else if(rand[i]<=200){
-    cc="!";
-    }
-    
-    
-    b=b+String.fromCharCode(d)+cc+rand[i]+"/";
-    
-    if(rand[i]<100){
-    var bana=round(random(0,10));
-    if(bana<50){
-   // b=b+"~";
-    }
-    else if(bana<50){
-   // b=b+"`";    
-    }
-    }
-    
-    }
-    
-    if(input1val.length>0){
-    b=b+apples;
+
+    if (input1val.length > 0) {
+        b = b + apples;
     }
     return b;
-    
-   
-    
-    
+
+
+
+
 };
-var Decode=function(x){
-var b="";
-    var input1=x;
-    var div1=document.getElementById("mydiv");
-    var input1val=input1;
-    var input1valc=input1val;
-    
-    var a=input1valc.split("/");
-    for(var i=0;i<a.length;i++){
-    if(i===a.length-1){
-    continue;
+var Decode = function(x) {
+    var b = "";
+    var input1 = x;
+    var div1 = document.getElementById("mydiv");
+    var input1val = input1;
+    var input1valc = input1val;
+
+    var a = input1valc.split("/");
+    for (var i = 0; i < a.length; i++) {
+        if (i === a.length - 1) {
+            continue;
+        }
+
+        var b = a[i][0];
+
+        b = b.charCodeAt(0);
+
+        var c = a[i];
+        c = c.toString();
+
+        c = c.replace(new RegExp("(.@|.!)", "g"), "");
+        //c=c.replace(/~/g,"");
+
+        //console.log(parseInt(c));
+
+        b = parseInt(b) - parseInt(a[a.length - 1]) - parseInt(c);
+        //console.log(b);
+        b = String.fromCharCode(b);
+
+        a[i] = b;
     }
-    
-    var b=a[i][0];
-    
-    b=b.charCodeAt(0);
-    
-   var c=a[i];
-   c=c.toString();
-   
-   c=c.replace(new RegExp("(.@|.!)","g"),"");
-    //c=c.replace(/~/g,"");
-  
-   //console.log(parseInt(c));
-   
-    b=parseInt(b)-parseInt(a[a.length-1])-parseInt(c);
-    //console.log(b);
-    b=String.fromCharCode(b);
-    
-    a[i]=b;
-    }
-    a.splice(a.length-1,1);
-    a=a.join('');
-    
-   return a;
-        
+    a.splice(a.length - 1, 1);
+    a = a.join('');
+
+    return a;
+
 };
 
 
@@ -382,103 +380,107 @@ var root208 = document.querySelector(':root');
 
 // Create a function for getting a variable value
 function getRoot(a) {
-  // Get the styles (properties and values) for the root
-  var rs = getComputedStyle(root208);
-  // Alert the value of the --blue variable
-  return rs.getPropertyValue(a);
+    // Get the styles (properties and values) for the root
+    var rs = getComputedStyle(root208);
+    // Alert the value of the --blue variable
+    return rs.getPropertyValue(a);
 };
 
 // Create a function for setting a variable value
-function setRoot(a,b) {
-  // Set the value of variable --blue to another value (in this case "lightblue")
-  root208.style.setProperty(a, b);
+function setRoot(a, b) {
+    // Set the value of variable --blue to another value (in this case "lightblue")
+    root208.style.setProperty(a, b);
     return b;
 };
 
 
-setRoot("--darkblue","rgb(0, 10, 122)");    
+setRoot("--darkblue", "rgb(0, 10, 122)");
 
-function MatchStrings(a,b,m){
-var a1=a;
-var b1=b;
-var finalStr="";
-var subStr2="";
-var subStr="";
-    
-while(b1.length>a1.length){
-a1=a1+" ";
-}
-while(a1.length>b1.length){
-b1=b1+" ";    
-}
-    
+function MatchStrings(a, b, m) {
+    var a1 = a;
+    var b1 = b;
+    var finalStr = "";
+    var subStr2 = "";
+    var subStr = "";
 
-if(m==="sub"){
-for(var i=0;i<a1.length;i++){    
-subStr=a1[i];
-subStr2=b1[i];
-    
-if(subStr===" "){
-finalStr=finalStr+" ";
-}
-    
-else if(subStr2===" "){
-finalStr=finalStr+subStr;
-}
-eise if(subStr===subStr2){
-finalStr=finalStr+" "; 
-    
-}
-else{
-finalStr=finalStr+subStr;
-}
-    
-subStr="";
-subStr2="";
-}
- return finalStr;   
-}
-    
+    while (b1.length > a1.length) {
+        a1 = a1 + " ";
+    }
+    while (a1.length > b1.length) {
+        b1 = b1 + " ";
+    }
+
+
+    if (m === "sub") {
+        for (var i = 0; i < a1.length; i++) {
+            subStr = a1[i];
+            subStr2 = b1[i];
+
+            if (subStr === " ") {
+                finalStr = finalStr + " ";
+            } else if (subStr2 === " ") {
+                finalStr = finalStr + subStr;
+            }
+
+            eise
+            if (subStr === subStr2) {
+                finalStr = finalStr + " ";
+
+            } else {
+                finalStr = finalStr + subStr;
+            }
+
+            subStr = "";
+            subStr2 = "";
+        }
+        return finalStr;
+    }
+
 };
 
 
 
 
+var newPjs = function(x, processjs208) {
+    var canvas111 = document.getElementById(x);
+    var processing = new Processing(canvas111, function(processing) {
+        //  processing.size(400, 400);
+        processing.background(0xFFF);
+
+        var mouseIsPressed = false;
+        processing.mousePressed = function() {
+            mouseIsPressed = true;
+        };
+        processing.mouseReleased = function() {
+            mouseIsPressed = false;
+        };
+
+        var keyIsPressed = false;
+        processing.keyPressed = function() {
+            keyIsPressed = true;
+        };
+        processing.keyReleased = function() {
+            keyIsPressed = false;
+        };
+
+        function getImage(s) {
+            var url = "https://www.kasandbox.org/programming-images/" + s + ".png";
+            processing.externals.sketch.imageCache.add(url);
+            return processing.loadImage(url);
+        }
+
+        with(processing) {
+
+
+            // INSERT YOUR KHAN ACADEMY PROGRAM HERE
+            processjs208();
 
 
 
-var newPjs=function(x,processjs208){
-        var canvas111 = document.getElementById(x);
-        var processing = new Processing(canvas111, function(processing) {
-          //  processing.size(400, 400);
-            processing.background(0xFFF);
-    
-            var mouseIsPressed = false;
-            processing.mousePressed = function () { mouseIsPressed = true; };
-            processing.mouseReleased = function () { mouseIsPressed = false; };
-    
-            var keyIsPressed = false;
-            processing.keyPressed = function () { keyIsPressed = true; };
-            processing.keyReleased = function () { keyIsPressed = false; };
-    
-            function getImage(s) {
-                var url = "https://www.kasandbox.org/programming-images/" + s + ".png";
-                processing.externals.sketch.imageCache.add(url);
-                return processing.loadImage(url);
-            }
-    
-            with (processing) {
-                
-                
-                // INSERT YOUR KHAN ACADEMY PROGRAM HERE
-                processjs208();
-           
-                
-                
-            }
-            if (typeof draw !== 'undefined') processing.draw = draw;
-        });
-    };
+        }
+        if (typeof draw !== 'undefined') processing.draw = draw;
+    });
+};
 getQuery("body").appendChild(thediv208);
 var Jn;
 var jn;
