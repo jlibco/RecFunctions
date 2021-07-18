@@ -475,6 +475,7 @@ final=str.search(reg);
 if(c==="replace"){
 final=str.replace(reg);    
 }
+return final;
 };
 
 
