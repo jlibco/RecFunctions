@@ -423,7 +423,7 @@ function MatchStrings(a, b, m) {
             else if (subStr2 === " ") {
                 finalStr = finalStr + subStr;
             }
-            eise if (subStr === subStr2) {
+            else if (subStr === subStr2) {
                 finalStr = finalStr + " ";
             } 
            
