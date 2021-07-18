@@ -462,6 +462,20 @@ function MatchStrings(a, b, m) {
     }
 
 };
+function RegExps(a,b,c){
+var str=a;
+var reg=b;
+var final="";
+if(c==="match"){
+final=str.match(reg);   
+}
+    if(c==="search"){
+final=str.search(reg);   
+}
+if(c==="replace"){
+final=str.replace(reg);    
+}
+};
 
 
 
