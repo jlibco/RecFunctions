@@ -483,7 +483,7 @@ var newPjs = function(x, processjs208) {
     });
 };
 getQuery("body").appendChild(thediv208);
-var Jn;
+//var Jn;
 var jn;
 var jnId;
 
