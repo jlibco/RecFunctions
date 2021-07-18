@@ -284,7 +284,7 @@ var Encode = function(x) {
     var randomS = ["/", "]", "!", "=", "-", ".", ">", "<"];
     var button1 = getId("buttons");
 
-    var apples = Math.round(random(0, 10000));
+    var apples = Math.round(random(0, 1000));
 
     //  console.log(getQuery("body"));
     var input1 = x;
@@ -462,19 +462,23 @@ function MatchStrings(a, b, m) {
     }
 
 };
+    
 function RegExps(a,b,c){
 var str=a;
 var reg=b;
 var final="";
+final=str[c](reg);
+  /*
 if(c==="match"){
 final=str.match(reg);   
 }
-    if(c==="search"){
+else if(c==="search"){
 final=str.search(reg);   
 }
-if(c==="replace"){
+else if(c==="replace"){
 final=str.replace(reg);    
-}
+}*/
+   
 return final;
 };
 
