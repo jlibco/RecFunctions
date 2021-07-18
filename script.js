@@ -7,6 +7,7 @@ Javascipt library concerning Math, DOM modification, and JSON, and css vars.
 //var scr=document.createElement("script");
 //scr.src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js";
 //document.body.appendChild(scr);
+try{
 var thediv208 = document.createElement("div");
 var jns = [];
 var jntarget = -1;
@@ -621,3 +622,7 @@ var jn = function(id, a, b, c) {
     //console.log(jntarget);
     return jns[jntarget];
 };
+}
+catch(e){
+console.log(e);    
+}
