@@ -411,7 +411,7 @@ function MatchStrings(a, b, m) {
         b1 = b1 + " ";
     }
 
-
+    
     if (m === "sub") {
         for (var i = 0; i < a1.length; i++) {
             subStr = a1[i];
@@ -424,6 +424,30 @@ function MatchStrings(a, b, m) {
                 finalStr = finalStr + subStr;
             }
             else if (subStr === subStr2) {
+                finalStr = finalStr + " ";
+            } 
+           
+            else {
+                finalStr = finalStr + subStr;
+            }
+
+            subStr = "";
+            subStr2 = "";
+        }
+        return finalStr;
+    }
+    if (m === "add") {
+        for (var i = 0; i < a1.length; i++) {
+            subStr = a1[i];
+            subStr2 = b1[i];
+
+            if (subStr !== " " && subStr2===" ") {
+                finalStr = finalStr + subStr;
+            }
+            else if (subStr2 !== " " && subStr===" ") {
+                finalStr = finalStr + subStr2;
+            }
+            else if (subStr===" " && subStr2===" ") {
                 finalStr = finalStr + " ";
             } 
            
