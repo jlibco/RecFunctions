@@ -260,6 +260,19 @@ function log(x1, x2) {
     var b = Math.log(x2);
     return b / a;
 };
+    
+Array.prototype.each=function(cal){
+for(var i=0;i<this.length;i++){
+cal(i);
+}
+};
+    
+String.prototype.each=function(cal){
+for(var i=0;i<this.length;i++){
+cal(i);
+}
+};
+    
 var JSONp = function(arg) {
     var a = [];
     for (var i = 0; i < arg.length; i++) {
@@ -666,5 +679,5 @@ var jn = function(id, a, b, c) {
 };
 }
 catch(e){
-console.log(e);    
+console.log("RecFunction Error: "+e);    
 }
