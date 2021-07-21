@@ -288,13 +288,7 @@ for(var i=0;i<this.length;i++){
 cal(i);
 }
 };
-Object.prototype.each=function(cal){
-for(var i=0;i<Object.keys(this).length;i++){
-var obj=this;
-cal(i);
-}
-};
-    
+
 
     
 var JSONp = function(arg) {
