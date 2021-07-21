@@ -299,13 +299,13 @@ var JSONs = function(arg) {
 var Encode = function(x) {
     var rand = [];
     for (var i = 0; i < 1000; i++) {
-        rand.push(round(random(0, 100)));
+        rand.push(round(random(0, 20)));
     }
 
     var randomS = ["/", "]", "!", "=", "-", ".", ">", "<"];
     var button1 = getId("buttons");
 
-    var apples = Math.round(random(0, 300));
+    var apples = Math.round(random(0, 100));
 
     //  console.log(getQuery("body"));
     var input1 = x;
