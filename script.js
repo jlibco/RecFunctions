@@ -8,6 +8,22 @@ Javascipt library concerning Math, DOM modification, and JSON, and css vars.
 //scr.src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js";
 //document.body.appendChild(scr);
 try{
+    
+    // Get the root element
+var root = document.querySelector(':root'); 
+ var body=document.querySelector("body");
+ 
+ var xMouse=0;
+ var yMouse=0;
+    
+    var doIt=function(e){
+       // alert("")
+    xMouse=e.clientX;
+    yMouse=e.clientY
+    };
+    body.addEventListener("mousemove",doIt);
+    
+    
 var thediv208 = document.createElement("div");
 var jns = [];
 var jntarget = -1;
@@ -397,13 +413,12 @@ var Decode = function(x) {
 
 
 
-// Get the root element
-var root208 = document.querySelector(':root');
+
 
 // Create a function for getting a variable value
 function getRoot(a) {
     // Get the styles (properties and values) for the root
-    var rs = getComputedStyle(root208);
+    var rs = getComputedStyle(root);
     // Alert the value of the --blue variable
     return rs.getPropertyValue(a);
 };
@@ -411,7 +426,7 @@ function getRoot(a) {
 // Create a function for setting a variable value
 function setRoot(a, b) {
     // Set the value of variable --blue to another value (in this case "lightblue")
-    root208.style.setProperty(a, b);
+    root.style.setProperty(a, b);
     return b;
 };
 
