@@ -200,7 +200,7 @@ function pow(a, b) {
     return Math.pow(a, b);
 };
 
-function pow(a) {
+function floor(a) {
     return Math.floor(a);
 
 };
