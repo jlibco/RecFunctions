@@ -276,6 +276,7 @@ function log(x1, x2) {
     var b = Math.log(x2);
     return b / a;
 };
+   
  function nroot(x1,x2){
   return log(x2,x1);   
  };
