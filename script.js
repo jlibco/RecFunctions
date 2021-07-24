@@ -41,6 +41,7 @@ try{
     var eleC1=eleC[j];
  if(window[eleC1]===undefined || window[eleC1]===null || window[eleC1]===NaN || window[eleC1]===""){
  window[eleC1]=[];
+ window[eleC1].push(ele);
  }
  else{
  window[eleC1].push(ele);    
