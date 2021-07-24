@@ -35,11 +35,12 @@ try{
   continue;
   }
 
-     
- window[ele.id+"I"]=ele;
+     var a=ele.id+"I";
+ window[a]=ele;
  for(var j=0;j<eleC.length;j++){
     var eleC1=eleC[j];
-     var wE=window[eleC1+"C"];
+    var a=eleC1+"C";
+     var wE=window[a];
  if(wE===undefined || wE===null || wE===NaN || wE===""){
     wE=[];
    wE.push(ele);
