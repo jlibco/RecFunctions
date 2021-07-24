@@ -22,7 +22,7 @@ try{
  
  for(var i=0;i<all.length;i++){
  var ele=all[i];
-  
+  console.log(ele);
  var eleC=ele.className;
   var eleCC=eleC.split(" ");
   if(eleC.length>1){
