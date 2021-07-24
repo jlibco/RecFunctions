@@ -18,7 +18,7 @@ try{
     }   
  var root = document.querySelector(':root'); 
  var body=document.querySelector("body");
- var all=document.querySelector("*");
+ var all=document.querySelectorAll("*");
  
  for(var i=0;i<all.length;i++){
  var ele=all[i];
