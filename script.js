@@ -35,19 +35,19 @@ try{
   continue;
   }
 
-     var a=ele.id+"I";
+     var a=ele.id;
  window[a]=ele;
  for(var j=0;j<eleC.length;j++){
     var eleC1=eleC[j];
-    var a=eleC1;
-     console.log(a);
-     var wE=window[a];
- if(wE===undefined || wE===null || wE===NaN || wE===""){
-    wE=[];
-   wE.push(ele);
+   
+     
+     var wE=window[eleC1];
+ if(window[eleC1]===undefined || window[eleC1]===null || window[eleC1]===NaN || window[eleC1]===""){
+    window[eleC1]=[];
+   window[eleC1].push(ele);
  }
  else{
- wE.push(ele);    
+ window[eleC1].push(ele);    
  }
  }
      
