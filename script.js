@@ -22,8 +22,18 @@ try{
  
  for(var i=0;i<all.length;i++){
  var ele=all[i];
- var eleC=all[i].className;
+  
+ var eleC=ele.className;
+  var eleCC=eleC.split(" ");
+  if(eleC.length>1){
  eleC=eleC.split(" ");
+  }
+  else if(eleC.length===1){
+  eleC=[eleC];
+  }
+  else if(eleC.length===0){
+  continue;
+  }
  console.log(eleC);
      
  window[ele.id]=ele;
