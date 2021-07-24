@@ -10,15 +10,15 @@ Javascipt library concerning Math, DOM modification, and JSON, and css vars.
 try{
     
     // Get the root element
-var root = document.querySelector(':root'); 
- var body=document.querySelector("body");
-    
- var elementTags=[];
+
+ var elementTags=["img","div","p","br","html","body","a","script","h1","h2","h3","h4","h5","h6","span"];
     for(var i=0;i<elementTags.length;i++){
      var ele=elementTags[i];
     window[ele]=document.querySelectorAll('ele');
     }   
- 
+ var root = document.querySelector(':root'); 
+ var body=document.querySelector("body");
+    
  var xMouse=0;
  var yMouse=0;
     
