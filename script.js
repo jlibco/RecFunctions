@@ -18,6 +18,12 @@ try{
     }   
  var root = document.querySelector(':root'); 
  var body=document.querySelector("body");
+ var all=document.querySelector("*");
+ 
+ for(var i=0;i<all.length;i++){
+ var ele=all[i];
+ window[ele.id]=ele;
+ }
     
  var xMouse=0;
  var yMouse=0;
