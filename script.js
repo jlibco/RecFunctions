@@ -27,7 +27,13 @@ try{
      
  window[ele.id]=ele;
  for(var j=0;j<eleC.length;j++){
- window[eleC[j]].push(ele);
+    var eleC1=eleC[j];
+ if(window[eleC1]===undefined){
+ window[eleC1]=[];
+ }
+ else{
+ window[eleC1].push(ele);    
+ }
  }
      
  }
