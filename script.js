@@ -12,6 +12,12 @@ try{
     // Get the root element
 var root = document.querySelector(':root'); 
  var body=document.querySelector("body");
+    
+ var elementTags=[];
+    for(var i=0;i<elementTags.length;i++){
+     var ele=elementTags[i];
+    window[ele]=document.querySelectorAll('ele');
+    }   
  
  var xMouse=0;
  var yMouse=0;
