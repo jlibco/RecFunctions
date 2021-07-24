@@ -36,15 +36,16 @@ try{
   }
 
      
- window[ele.id]=ele;
+ window[ele.id+"I"]=ele;
  for(var j=0;j<eleC.length;j++){
     var eleC1=eleC[j];
- if(window[eleC1]===undefined || window[eleC1]===null || window[eleC1]===NaN || window[eleC1]===""){
- window[eleC1]=[];
- window[eleC1].push(ele);
+     var wE=window[eleC1+"C"];
+ if(wE===undefined || wE===null || wE===NaN || wE===""){
+    wE=[];
+   wE.push(ele);
  }
  else{
- window[eleC1].push(ele);    
+ wE.push(ele);    
  }
  }
      
