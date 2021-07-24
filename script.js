@@ -24,11 +24,12 @@ try{
  var ele=all[i];
  var eleC=all[i].className;
  eleC=eleC.split(" ");
+ console.log(eleC);
      
  window[ele.id]=ele;
  for(var j=0;j<eleC.length;j++){
     var eleC1=eleC[j];
- if(window[eleC1]===undefined){
+ if(window[eleC1]===undefined || window[eleC1]===null || window[eleC1]===NaN || window[eleC1]===""){
  window[eleC1]=[];
  }
  else{
