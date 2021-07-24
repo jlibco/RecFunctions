@@ -39,7 +39,8 @@ try{
  window[a]=ele;
  for(var j=0;j<eleC.length;j++){
     var eleC1=eleC[j];
-    var a=eleC1+"C";
+    var a=eleC1;
+     console.log(a);
      var wE=window[a];
  if(wE===undefined || wE===null || wE===NaN || wE===""){
     wE=[];
