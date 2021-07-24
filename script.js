@@ -22,8 +22,16 @@ try{
  
  for(var i=0;i<all.length;i++){
  var ele=all[i];
+ var eleC=all[i].className;
+ eleC=eleC.split(" ");
+     
  window[ele.id]=ele;
+ for(var j=0;j<eleC.length;j++){
+ window[eleC[j]].push(ele);
  }
+     
+ }
+    
     
  var xMouse=0;
  var yMouse=0;
