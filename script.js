@@ -22,7 +22,7 @@ try{
  
  for(var i=0;i<all.length;i++){
  var ele=all[i];
-  console.log(ele);
+
  var eleC=ele.className;
   var eleCC=eleC.split(" ");
   if(eleC.length>1){
@@ -34,7 +34,7 @@ try{
   else if(eleC.length===0){
   continue;
   }
- console.log(eleC);
+
      
  window[ele.id]=ele;
  for(var j=0;j<eleC.length;j++){
