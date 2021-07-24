@@ -8,8 +8,7 @@ Javascipt library concerning Math, DOM modification, and JSON, and css vars.
 //scr.src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js";
 //document.body.appendChild(scr);
 try{
-     var root = document.querySelector(':root'); 
- var body=document.querySelector("body");
+  
     // Get the root element
    var eleD=function(){
     
@@ -60,6 +59,10 @@ try{
     eleD();
    window.setInterval(eleD,1000);   
     
+     
+        var root = document.querySelector(':root'); 
+ var body=document.querySelector("body");
+     
  var xMouse=0;
  var yMouse=0;
     
