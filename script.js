@@ -494,16 +494,16 @@ Element.prototype.addAni=function(){
   
 function Has(a,b){
  if(typeof b!=="object"){
-  b=[b]
+  b=[b];
  }
  
- var c=true;
+ var c=false;
  for(var i=0;i<b.length;i++){
- if(a.includes(b[i])!==true){
+ if(a.includes(b[i])!==false){
    
  }
- else if(a.includes(b[i])!==false){
- c=false;  
+ else if(a.includes(b[i])===true){
+ c=true;  
  }
  }
 
