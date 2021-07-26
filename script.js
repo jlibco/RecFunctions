@@ -116,11 +116,11 @@ function newEle(a) {
     return b;
 };
 
-function setVal(a, b, c) {
+function setVal(a, b) {
     if (a === "var") {
-        window[b] = c;
+        return window[b];
     } else {
-        a[b] = c;
+        return a[b];
     }
 };
 //by query
