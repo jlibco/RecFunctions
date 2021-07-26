@@ -457,6 +457,14 @@ var Decode = function(x) {
     return a;
 
 };
+function Defined(x){
+if(x===undefined || x===NaN || x===null){
+return false;  
+}
+else{
+return true;  
+}
+};
 
 
 
@@ -480,7 +488,9 @@ function setRoot(a, b) {
 
 
 setRoot("--darkblue", "rgb(0, 10, 122)");
-
+Element.prototype.addAni=function(){
+  
+};
 function MatchStrings(a, b, m) {
     var a1 = a;
     var b1 = b;
