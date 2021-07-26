@@ -499,10 +499,10 @@ function Has(a,b){
  
  var c=true;
  for(var i=0;i<b.length;i++){
- if(a.includes(b[i])===true){
+ if(a.includes(b[i])!==true){
    
  }
- else if(a.includes(b[i])===false){
+ else if(a.includes(b[i])!==false){
  c=false;  
  }
  }
