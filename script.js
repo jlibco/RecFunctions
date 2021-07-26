@@ -576,7 +576,21 @@ final=str.replace(reg);
 return final;
 };
 
+function Animate(name,styles){
+var style=document.querySelector("style");
+if(style===undefined || style===null || style===NaN || style===""){
+var styleSheet21 = document.createElement("style");
+}
+else{
+var styleSheet21 =style;
+}
+// Adding The Keyframes
+styleSheet21.innerHTML=styleSheet21.innerHTML+"@keyframes "+name+"{"+styles+"}";
+if(style===undefined || style===null || style===NaN || style===""){
+body.appendChild(styleSheet21)
+}
 
+}
 
 
 var newPjs = function(x, processjs208) {
