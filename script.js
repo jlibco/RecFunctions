@@ -491,6 +491,25 @@ setRoot("--darkblue", "rgb(0, 10, 122)");
 Element.prototype.addAni=function(){
   
 };
+  
+function Has(a,b){
+ if(typeof b!=="object"){
+  b=[b]
+ }
+ 
+ var c=true;
+ for(var i=0;i<b.length;i++){
+ if(a.includes(b[i])===true){
+   
+ }
+ else if(a.includes(b[i])===false){
+ c=false;  
+ }
+ }
+
+return c;  
+}
+  
 function MatchStrings(a, b, m) {
     var a1 = a;
     var b1 = b;
