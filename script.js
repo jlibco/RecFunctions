@@ -47,10 +47,10 @@ try{
      var wE=window[eleC1];
  if(window[eleC1]===undefined || window[eleC1]===null || window[eleC1]===NaN || window[eleC1]===""){
     window[eleC1]=[];
-   window[eleC1].push(ele);
+   wE.push(ele);
  }
  else{
- window[eleC1].push(ele);    
+ wE.push(ele);    
  }
  }
      
