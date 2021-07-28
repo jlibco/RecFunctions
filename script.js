@@ -509,7 +509,17 @@ function Has(a,b){
 
 return c;  
 }
-  
+Element.prototype.addClass=function(x){
+this.className=this.className+" "+x;  
+};
+Element.prototype.removeClass=function(x){
+this.className=this.className.replace(x,"");  
+};
+  Element.prototype.getClass=function(x){
+var a=this.className;
+    a=a.split(" ");
+    return a;
+};
 function MatchStrings(a, b, m) {
     var a1 = a;
     var b1 = b;
