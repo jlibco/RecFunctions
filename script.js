@@ -515,12 +515,27 @@ b=b.join("");
 return b;
 };
 Element.prototype.addClass=function(x){
+if(this.className===""){
+this.className=this.className+x;
+}
+else{
 this.className=this.className+" "+x;  
-this.className=this.cleanClass();
+}
 };
 Element.prototype.removeClass=function(x){
+
 this.className=this.className.replace(x,"");  
-this.className=this.cleanClass();
+var a=this.className.split(" ");
+  for(var i=0;i<a.length;i++){
+  if(a[i]====""){
+  a.splice(i,1);  
+  }
+  else{
+    
+  }
+  }
+  a=a.join("");
+  this.className=a;
 };
   Element.prototype.getClass=function(x){
 var a=this.className;
