@@ -527,7 +527,7 @@ Element.prototype.removeClass=function(x){
 this.className=this.className.replace(x,"");  
 var a=this.className.split(" ");
   for(var i=0;i<a.length;i++){
-  if(a[i]====""){
+  if(a[i]===""){
   a.splice(i,1);  
   }
   else{
