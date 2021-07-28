@@ -504,15 +504,28 @@ function Has(a,b){
 
 return c;  
 }
+Element.prototype.cleanClass=function(){
+var b=this.className.split(" ");
+for(var i=0;i<b.length;i++){
+if(b[i]===""){
+b.splice(i,1);  
+}
+}
+b=b.join("");
+return b;
+};
 Element.prototype.addClass=function(x){
 this.className=this.className+(this.className.length===0?"":" ")+x;  
+this.className=this.cleanClass();
 };
 Element.prototype.removeClass=function(x){
 this.className=this.className.replace(x,"");  
+this.classNamethis.cleanClass();
 };
   Element.prototype.getClass=function(x){
 var a=this.className;
     a=a.split(" ");
+    
     return a;
 };
 function MatchStrings(a, b, m) {
