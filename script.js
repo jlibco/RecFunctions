@@ -520,7 +520,7 @@ this.className=this.cleanClass();
 };
 Element.prototype.removeClass=function(x){
 this.className=this.className.replace(x,"");  
-this.classNamethis.cleanClass();
+this.className=this.cleanClass();
 };
   Element.prototype.getClass=function(x){
 var a=this.className;
