@@ -515,7 +515,7 @@ b=b.join("");
 return b;
 };
 Element.prototype.addClass=function(x){
-this.className=this.className+(this.className.length===0?"":" ")+x;  
+this.className=this.className+" "+x;  
 this.className=this.cleanClass();
 };
 Element.prototype.removeClass=function(x){
