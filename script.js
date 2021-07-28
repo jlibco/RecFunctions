@@ -10,8 +10,7 @@ Javascipt library concerning Math, DOM modification, and JSON, and css vars.
 try{
   
     // Get the root element
-   var eleD=function(){
-    
+
     
 
  var elementTags=["img","div","p","br","html","body","a","script","h1","h2","h3","h4","h5","h6","span","button","canvas","dl","dt","svg","iframe","input","meta","link","title","output","var"];
@@ -55,11 +54,7 @@ try{
  }
      
  }
-   };
-    eleD();
-   window.setInterval(eleD,1000);   
-    
-     
+ 
         var root = document.querySelector(':root'); 
  var body=document.querySelector("body");
      
