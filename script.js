@@ -510,7 +510,7 @@ function Has(a,b){
 return c;  
 }
 Element.prototype.addClass=function(x){
-this.className=this.className+" "+x;  
+this.className=this.className+(this.className.length===0?"":" ")+x;  
 };
 Element.prototype.removeClass=function(x){
 this.className=this.className.replace(x,"");  
