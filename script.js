@@ -867,7 +867,7 @@ var jn = function(id, a, b, c) {
 function Ready(x){
 window.setTimeout(function(){
 x();
-},10);
+},2);
 }
 }
 catch(e){
