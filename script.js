@@ -24,8 +24,20 @@ try{
     
     var h=thebody[0];
    h.appendChild(jqueryScript)
-   
+   /*Load Google Icons*/
 
+ 
+  var thehead=document.querySelectorAll("head");
+    
+  
+    var linkScript=document.createElement("link");
+    
+    linkScript.href="https://fonts.googleapis.com/icon?family=Material+Icons";
+    linkScript.rel="stylesheet";
+    
+    var h=thehead[0];
+   h.appendChild(linkScript)
+   
 /*Set autovars*/
 function autoVars(){
  var elementTags=["img","div","p","br","html","body","a","script","h1","h2","h3","h4","h5","h6","span","button","canvas","dl","dt","svg","iframe","input","meta","link","title","output","var"];
