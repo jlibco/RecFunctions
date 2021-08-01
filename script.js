@@ -325,7 +325,13 @@ function log(x1, x2) {
  function nroot(x1,x2){
   return log(x2,x1);   
  };
-    
+
+  function oparr(x1,x2){
+  for(var i=0;i<x1.length;i++){
+   var a=x1[i];
+  x2(a);
+  }
+  };
 Array.prototype.each=function(cal){
 for(var i=0;i<this.length;i++){
 cal(i);
