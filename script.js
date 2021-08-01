@@ -43,7 +43,7 @@ try{
    
      
      var wE=window[eleC1];
- if(window[eleC1]===undefined || window[eleC1]===null || window[eleC1]===NaN || window[eleC1]===""){
+ if(wE===undefined || wE===null || wE===NaN || wE===""){
     window[eleC1]=[];
    wE.push(ele);
  }
