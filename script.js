@@ -331,7 +331,9 @@ function log(x1, x2) {
    var a=x1[i];
   x2(a);
   }
+  return x1;
   };
+  
 Array.prototype.each=function(cal){
 for(var i=0;i<this.length;i++){
 cal(i);
