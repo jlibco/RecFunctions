@@ -2,6 +2,11 @@
 Copyright 2021 RecFunctions Josh T.
 Javascipt library concerning Math, DOM modification, and JSON, and css vars.
 
+
+Also Known as RedRabbit on KhanAcademy @redrabbit208 
+
+Auto loads popular scripts.
+
 */
 
 //var scr=document.createElement("script");
@@ -845,6 +850,13 @@ var jn = function(id, a, b, c) {
     //console.log(jntarget);
     return jns[jntarget];
 };
+ 
+ 
+function Ready(x){
+window.setTimeout(function(){
+x();
+},10);
+}
 }
 catch(e){
  var err=new Error(e);
