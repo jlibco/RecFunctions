@@ -44,7 +44,8 @@ try{
      
      var wE=window[eleC1];
  if(wE===undefined || wE===null || wE===NaN || wE===""){
-    window[eleC1]=[];
+    wE=[];
+   console.log(wE);
    wE.push(ele);
  }
  else{
