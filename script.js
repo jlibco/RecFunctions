@@ -8,9 +8,20 @@ Javascipt library concerning Math, DOM modification, and JSON, and css vars.
 //scr.src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js";
 //document.body.appendChild(scr);
 try{
+/*Load jQuery*/
+ var thebody=document.querySelectorAll("body");
+    
   
-    // Get the root element
+    var jqueryScript=document.createElement("script");
+    
+    jqueryScript.src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js";
+    
+    
+    var h=thebody[0];
+   h.appendChild(jqueryScript)
+   
 
+/*Set autovars*/
 function autoVars(){
  var elementTags=["img","div","p","br","html","body","a","script","h1","h2","h3","h4","h5","h6","span","button","canvas","dl","dt","svg","iframe","input","meta","link","title","output","var"];
     for(var i=0;i<elementTags.length;i++){
