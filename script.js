@@ -330,7 +330,8 @@ function log(x1, x2) {
   function oparr(x1,x2){
   for(var i=0;i<x1.length;i++){
    var a=x1[i];
-  x2(a);
+  x2(i);
+    
   }
   return x1;
   };
