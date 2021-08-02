@@ -37,6 +37,21 @@ try{
     
     var h=thehead[0];
    h.appendChild(linkScript)
+ 
+ /*Processing JS */
+ var thebody=document.querySelectorAll("body");
+    
+  
+    var pjsScript=document.createElement("script");
+    
+    pjsScript.src="https://cdn.jsdelivr.net/gh/processing-js/processing-js@1c1d58d7dfddfdbdc351e0160496078598a0b943/processing.js";
+    
+    
+    var h=thebody[0];
+   h.appendChild(pjsScript)
+ 
+ 
+ 
    
 /*Set autovars*/
 function autoVars(){
@@ -683,47 +698,23 @@ body.appendChild(styleSheet21)
 }
 
 
-var newPjs = function(x, processjs208) {
-    var canvas111 = document.getElementById(x);
-    var processing = new Processing(canvas111, function(processing) {
-        //  processing.size(400, 400);
-        processing.background(0xFFF);
 
-        var mouseIsPressed = false;
-        processing.mousePressed = function() {
-            mouseIsPressed = true;
-        };
-        processing.mouseReleased = function() {
-            mouseIsPressed = false;
-        };
-
-        var keyIsPressed = false;
-        processing.keyPressed = function() {
-            keyIsPressed = true;
-        };
-        processing.keyReleased = function() {
-            keyIsPressed = false;
-        };
-
-        function getImage(s) {
-            var url = "https://www.kasandbox.org/programming-images/" + s + ".png";
-            processing.externals.sketch.imageCache.add(url);
-            return processing.loadImage(url);
-        }
-
-        with(processing) {
-
-
-            // INSERT YOUR KHAN ACADEMY PROGRAM HERE
-            processjs208();
-
-
-
-        }
-        if (typeof draw !== 'undefined') processing.draw = draw;
-    });
-};
 getQuery("body").appendChild(thediv208);
+ 
+ 
+  var Canvas=function(x,y){
+    
+     var programCode = function(processingInstance) {
+    with (processingInstance) {
+      eval(y)
+    }};
+
+  // Get the canvas that ProcessingJS will use
+  var canvas = document.querySelector(x); 
+  // Pass the function to ProcessingJS constructor
+  var processingInstance = new Processing(canvas, programCode); 
+    };
+ 
 //var Jn;
 var jn;
 var jnId;
