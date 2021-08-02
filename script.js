@@ -118,11 +118,11 @@ var jns = [];
 var jntarget = -1;
 
 function deg(x) {
-    return 180 / Math.PI * x;
+    return 180 / (Math.PI * x);
 };
 
 function rad(x) {
-    return 180 * Math.PI * x;
+    return 180 * (Math.PI * x);
 };
 
 function getId(a) {
