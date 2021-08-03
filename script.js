@@ -13,10 +13,16 @@ Auto loads popular scripts.
 //scr.src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js";
 //document.body.appendChild(scr);
 try{
-/*Load jQuery*/
-if(window.thefonts===undefined){
-window.thefonts=["Roboto:wght@100"]; 
+ 
+ function Ready(x){
+window.setTimeout(function(){
+x();
+},3);
 }
+}
+
+/*Load jQuery*/
+
  var thebody=document.querySelectorAll("body");
     
   
@@ -65,6 +71,10 @@ window.thefonts=["Roboto:wght@100"];
    h.appendChild(fontScript)
  
  
+ window.setTimeout(function(){
+ if(window.thefonts===undefined){
+window.thefonts=["Roboto:wght@100"]; 
+}
   var thebody=document.querySelectorAll("body");
     
   
@@ -106,7 +116,7 @@ window.thefonts=["Roboto:wght@100"];
     
     var h=thebody[0];
    h.appendChild(fontScript3)
- 
+ },1);
  
  
    
@@ -913,12 +923,7 @@ var jn = function(id, a, b, c) {
 };
  
  
-function Ready(x){
-window.setTimeout(function(){
-x();
-},2);
-}
-}
+
 catch(e){
  var err=new Error(e);
 console.log("RecFunction: "+err);    
