@@ -37,11 +37,7 @@ thefonts=x.fonts;
 
 } 
  
- function Ready(x){
-window.setTimeout(function(){
-x();
-},3);
-}
+
 
 
 /*Load jQuery*/
@@ -945,6 +941,11 @@ var jn = function(id, a, b, c) {
     return jns[jntarget];
 };
  
+  function Ready(x){
+window.setTimeout(function(){
+x();
+},3);
+}
  
 }
 catch(e){
