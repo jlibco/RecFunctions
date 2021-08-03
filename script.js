@@ -91,6 +91,7 @@ function autoVars(){
  wE.push(ele);
  }
  else if(typeof wE==="object"){
+ console.log(wE);
  wE.push(ele);    
  }
  }
