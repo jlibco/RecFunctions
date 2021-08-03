@@ -49,6 +49,17 @@ try{
     
     var h=thebody[0];
    h.appendChild(pjsScript)
+  /*Web Font */
+ var thebody=document.querySelectorAll("body");
+    
+  
+    var fontScript=document.createElement("script");
+    
+    fontScript.src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js";
+    
+    
+    var h=thebody[0];
+   h.appendChild(fontScript)
  
  
  
