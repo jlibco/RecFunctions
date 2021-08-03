@@ -86,18 +86,18 @@ function autoVars(){
    
      
      var wE=window[eleC1];
- if(wE===undefined || wE===null || wE===NaN || wE===""){
+ if(wE===undefined || wE===null || wE===NaN ||typeof wE!=="object"){
     wE=[];
  wE.push(ele);
  }
- else{
+ else if(typeof wE==="object"){
  wE.push(ele);    
  }
  }
      
  }
 };
- autoVars();
+
   
         var root = document.querySelector(':root'); 
  var body=document.querySelector("body");
