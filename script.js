@@ -98,9 +98,9 @@ window.thefonts=["Roboto:wght@100"];
    h.appendChild(fontScript2)
  
  
- var a="https://fonts.googleapis.com/css2?family=";
+ var a="https://fonts.googleapis.com/css2?";
  for(var i=0;i<thefonts.length;i++){
-  a=a+thefonts[i]+"&"
+  a=a+"family="+thefonts[i]+"&"
   
  }
  
