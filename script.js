@@ -19,7 +19,7 @@ window.setTimeout(function(){
 x();
 },3);
 }
-}
+
 
 /*Load jQuery*/
 
@@ -923,7 +923,7 @@ var jn = function(id, a, b, c) {
 };
  
  
-
+}
 catch(e){
  var err=new Error(e);
 console.log("RecFunction: "+err);    
