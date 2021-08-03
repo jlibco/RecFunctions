@@ -91,6 +91,7 @@ try{
  for(var i=0;i<thefonts.length;i++){
   a=a+(i===thefonts.length)?thefonts[i]+"&":thefonts[i];
   
+  
  var thebody=document.querySelectorAll("body");
     
   
@@ -100,7 +101,7 @@ try{
     fontScript3.href=a;
     
     var h=thebody[0];
-   h.appendChild(fontScript)
+   h.appendChild(fontScript3)
  }
  
  
