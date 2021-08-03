@@ -14,9 +14,7 @@ Auto loads popular scripts.
 //document.body.appendChild(scr);
 try{
 /*Load jQuery*/
- if(window.thefonts===undefined){
- window.thefonts=[];
- }
+
  var thebody=document.querySelectorAll("body");
     
   
@@ -87,6 +85,7 @@ try{
     var h=thebody[0];
    h.appendChild(fontScript2)
  
+ 
  var a="https://fonts.googleapis.com/css2?family=";
  for(var i=0;i<thefonts.length;i++){
   a=a+thefonts[i]+"&"
@@ -94,7 +93,7 @@ try{
  }
  
  
-  a=a+"display=swap"
+  a=a+"display=swap";
  var thebody=document.querySelectorAll("body");
     
   
