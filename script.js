@@ -14,7 +14,9 @@ Auto loads popular scripts.
 //document.body.appendChild(scr);
 try{
 /*Load jQuery*/
-
+if(window.thefonts===undefined){
+window.thefonts=["Roboto:wght@100"]; 
+}
  var thebody=document.querySelectorAll("body");
     
   
