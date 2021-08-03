@@ -14,6 +14,9 @@ Auto loads popular scripts.
 //document.body.appendChild(scr);
 try{
 /*Load jQuery*/
+ if(window.thefonts===undefined){
+ window.thefonts=[];
+ }
  var thebody=document.querySelectorAll("body");
     
   
@@ -60,6 +63,46 @@ try{
     
     var h=thebody[0];
    h.appendChild(fontScript)
+ 
+ 
+  var thebody=document.querySelectorAll("body");
+    
+  
+    var fontScript1=document.createElement("link");
+    
+    fontScript1.rel="preconnect";
+    fontScript1.href="https://fonts.googleapis.com";
+    
+    var h=thebody[0];
+   h.appendChild(fontScript1)
+ 
+ var thebody=document.querySelectorAll("body");
+    
+  
+    var fontScript2=document.createElement("link");
+    
+    fontScript2.rel="preconnect";
+    fontScript2.href="https://fonts.gstatic.com";
+    
+    var h=thebody[0];
+   h.appendChild(fontScript2)
+ 
+ var a="https://fonts.googleapis.com/css2?family=";
+ for(var i=0;i<thefonts.length;i++){
+  a=a+(i===thefonts.length)?thefonts[i]+"&":thefonts[i];
+  
+ var thebody=document.querySelectorAll("body");
+    
+  
+    var fontScript3=document.createElement("link");
+    
+    fontScript3.rel="stylesheet";
+    fontScript3.href=a;
+    
+    var h=thebody[0];
+   h.appendChild(fontScript)
+ }
+ 
  
  
  
