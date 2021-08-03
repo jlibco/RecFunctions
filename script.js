@@ -31,6 +31,12 @@ Auto loads popular scripts.
 //document.body.appendChild(scr);
 try{
  
+function Setup(x){
+
+thefonts=x.fonts;
+
+} 
+ 
  function Ready(x){
 window.setTimeout(function(){
 x();
