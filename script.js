@@ -512,6 +512,7 @@ var Encode = function(x) {
 
     var input1val = input1;
     var input1valc = input1val;
+ input1valc=window.btoa(input1valc);
     var cc = "";
     var b = "";
     for (var i = 0; i < input1valc.length; i++) {
@@ -588,6 +589,7 @@ var Decode = function(x) {
     }
     a.splice(a.length - 1, 1);
     a = a.join('');
+ a=window.atob(a);
 
     return a;
 
