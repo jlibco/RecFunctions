@@ -466,14 +466,24 @@ function log(x1, x2) {
   return x1;
   };
   
-     function dec2bin(dec) {
+    function dec2bin(dec,x) {
     dec=parseInt(dec)
-  return (dec >>> 0).toString(2);
+  return (dec >>> 0).toString(x);
 }
-function bin2dec(bin){
+function bin2dec(bin,x){
 bin=bin.toString();
-return parseInt(bin,2)
+return parseInt(bin,x)
 }
+function str2bin(str,x){
+str=str.toString();
+return str.charCodeAt(0).toString(x);
+}
+
+function bin2str(bin,x){
+bin=parseInt(bin,x)
+return String.fromCharCode(bin);
+}
+
  
  
 Array.prototype.each=function(cal){
