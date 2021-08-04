@@ -802,6 +802,21 @@ getQuery("body").appendChild(thediv208);
   var processingInstance = new Processing(canvas, programCode); 
     };
  
+  var Speak=function(text,arg,pitch1,rate,vol,voice){
+    
+    var s=new SpeechSynthesisUtterance();
+    s.lang="en-US";
+    s.text=text;
+    s.pitch=pitch1;
+    s.rate=rate;
+    s.volume=vol;
+    s.voice=speechSynthesis.getVoices()[voice];
+  
+   speechSynthesis.speak(s)
+   
+    };
+ 
+ 
 //var Jn;
 var jn;
 var jnId;
