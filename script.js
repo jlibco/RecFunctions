@@ -476,13 +476,25 @@ return parseInt(bin,x)
 }
 function str2bin(str,x){
 str=str.toString();
-return str.charCodeAt(0).toString(x);
+var a=[];
+for(var i=0;i<str.length;i++){
+var b=str[i];
+a.push(b.charCodeAt(0).toString(x));
+}
+return a;
 }
 
 function bin2str(bin,x){
-bin=parseInt(bin,x)
-return String.fromCharCode(bin);
+    var a=[];
+for(var i=0;i<bin.length;i++){
+bin[i]=parseInt(bin[i],x)
+var c=String.fromCharCode(bin[i])
+a.push(c);
 }
+a=a.join("");
+return a;
+}
+
 
  
  
