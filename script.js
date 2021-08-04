@@ -466,6 +466,16 @@ function log(x1, x2) {
   return x1;
   };
   
+     function dec2bin(dec) {
+    dec=parseInt(dec)
+  return (dec >>> 0).toString(2);
+}
+function bin2dec(bin){
+bin=bin.toString();
+return parseInt(bin,2)
+}
+ 
+ 
 Array.prototype.each=function(cal){
 for(var i=0;i<this.length;i++){
 cal(i);
