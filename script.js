@@ -802,7 +802,7 @@ getQuery("body").appendChild(thediv208);
   var processingInstance = new Processing(canvas, programCode); 
     };
  
-  var Speak=function(text,arg,pitch1,rate,vol,voice){
+  var Speak=function(text,pitch1,rate,vol,voice){
     
     var s=new SpeechSynthesisUtterance();
     s.lang="en-US";
