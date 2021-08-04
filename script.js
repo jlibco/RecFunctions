@@ -812,7 +812,7 @@ getQuery("body").appendChild(thediv208);
     s.volume=vol;
     s.voice=speechSynthesis.getVoices()[voice];
   
-   speechSynthesis.speak(s)
+   return s;
    
     };
  
