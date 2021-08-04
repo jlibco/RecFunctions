@@ -512,7 +512,7 @@ var Encode = function(x) {
 
     var input1val = input1;
     var input1valc = input1val;
- input1valc=window.btoa(input1valc);
+ 
     var cc = "";
     var b = "";
     for (var i = 0; i < input1valc.length; i++) {
@@ -550,6 +550,7 @@ var Encode = function(x) {
     if (input1val.length > 0) {
         b = b + apples;
     }
+ b=window.btoa(b);
     return b;
 
 
@@ -562,7 +563,8 @@ var Decode = function(x) {
     var div1 = document.getElementById("mydiv");
     var input1val = input1;
     var input1valc = input1val;
-
+ input1valc=window.atob(input1valc);
+ 
     var a = input1valc.split("/");
     for (var i = 0; i < a.length; i++) {
         if (i === a.length - 1) {
@@ -589,7 +591,7 @@ var Decode = function(x) {
     }
     a.splice(a.length - 1, 1);
     a = a.join('');
- a=window.atob(a);
+ 
 
     return a;
 
