@@ -854,15 +854,41 @@ getQuery("body").appendChild(thediv208);
  
 var DataBase=function(name){
 this.name=name; 
+this.data=[];
+this.dataNum=undefined;
 };
 DataBase.prototype.setItem=function(x,y){
-this[x]=y; 
+var dupl=false;
+for(var i=0;i<this.data.length;i++){
+if(this.data[i].name===x){
+dupl=true;
+this.dataNum=i;
+}
+}
+if(dupl===false){
+this.data.push({name:x,content:y});
+}
+else if(dupl===true){
+this.data[i]={name:x,content:y};
+}
+ dupl=false;
+ this.dataNum=undefined;
 };
 DataBase.prototype.getItem=function(x){
+for(var i=0;i<this.data.length;i++){
+if(x===this.data[i].name){
+return this.data[i].content;
+}
+}
 return this[x];
 };
 DataBase.prototype.removeItem=function(x){
-this[x]=undefined; 
+for(var i=0;i<this.data.length;i++){
+if(x===this.data[i].name){
+this.data.splice(i,1);
+}
+}
+ 
 };
 
  
