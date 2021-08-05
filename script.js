@@ -852,6 +852,19 @@ getQuery("body").appendChild(thediv208);
    
     };
  
+var DataBase=function(name){
+this.name=name; 
+};
+DataBase.prototype.setItem=function(x,y){
+this[x]=y; 
+};
+DataBase.prototype.getItem=function(x){
+return this[x];
+};
+DataBase.prototype.removeItem=function(x){
+this[x]=undefined; 
+};
+
  
 //var Jn;
 var jn;
