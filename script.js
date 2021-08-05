@@ -885,10 +885,16 @@ return this[x];
 DataBase.prototype.removeItem=function(x){
 for(var i=0;i<this.data.length;i++){
 if(x===this.data[i].name){
+var a=this.data[i];
 this.data.splice(i,1);
 }
 }
- 
+return a;
+};
+DataBase.prototype.clear=function(){
+var a=this.data;
+this.data=[];
+return a;
 };
 
  
