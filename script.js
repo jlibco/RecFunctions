@@ -1040,17 +1040,16 @@ var jn = function(id, a, b, c) {
 };
 var b=0; 
   function Ready(x){
-var a=window.setInterval(function(){
+var a=window.setTimeout(function(){
 
 if(window.jQuery!==undefined){
 x();
 
-window.clearInterval(a);
 }
  else{
-
+ Ready(x);
  }
-},2);
+},15);
 }
  
 }
