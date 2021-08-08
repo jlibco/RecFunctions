@@ -481,12 +481,14 @@ for(var i=0;i<str.length;i++){
 var b=str[i];
 a.push(b.charCodeAt(0).toString(x));
 }
+a=a.join(' ');
 return a;
 }
 
 function bin2str(bin,x){
     var a=[];
-for(var i=0;i<bin.length;i++){
+ bin=bin.split(" ");
+for(var i=0;i<bin.length;i++){ 
 bin[i]=parseInt(bin[i],x)
 var c=String.fromCharCode(bin[i])
 a.push(c);
