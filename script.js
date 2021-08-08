@@ -472,7 +472,7 @@ function log(x1, x2) {
 }
 function bin2dec(bin,x){
 bin=bin.toString();
-return parseInt(bin,x)
+return parseInt(bin,x);
 }
 function str2bin(str,x){
 str=str.toString();
