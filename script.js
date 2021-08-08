@@ -1038,9 +1038,12 @@ var jn = function(id, a, b, c) {
 };
  
   function Ready(x){
-window.setTimeout(function(){
+var a=window.setInterval(function(){
+if(window.jQuery!==undefined){
 x();
-},10);
+window.clearInterval(a);
+}
+},2);
 }
  
 }
