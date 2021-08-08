@@ -1036,13 +1036,17 @@ var jn = function(id, a, b, c) {
     //console.log(jntarget);
     return jns[jntarget];
 };
- 
+var b=1; 
   function Ready(x){
 var a=window.setInterval(function(){
 if(window.jQuery!==undefined){
 x();
+console.log("Loaded!");
 window.clearInterval(a);
 }
+ else{
+ console.log("Loading.");
+ }
 },2);
 }
  
