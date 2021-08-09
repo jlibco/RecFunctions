@@ -504,6 +504,7 @@ return a;
  bin[0]='0';
   
  }
+ return bin;
  }
 
 
