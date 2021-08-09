@@ -496,6 +496,15 @@ a.push(c);
 a=a.join("");
 return a;
 }
+ function purebin(bin,x){
+ while(x<bin.length){
+ for(var i=0;i<bin.length;i++){
+ bin[i]=bin[i+1];
+ }
+ bin[0]='0';
+  
+ }
+ }
 
 
  
