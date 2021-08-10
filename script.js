@@ -20,7 +20,7 @@ Javascipt library concerning Math, DOM modification, and JSON, and css vars.
 
 Created by Josh T.
 
-Also Known as RedRabbit on KhanAcademy @redrabbit208 
+Also Known as RedRabbit on KhanAcademy @nemoking 
 
 Auto loads popular scripts.
 
@@ -53,6 +53,8 @@ thefonts=x.fonts;
     var h=thebody[0];
    h.appendChild(jqueryScript)
    /*Load Google Icons*/
+ 
+ 
 
  
   var thehead=document.querySelectorAll("head");
@@ -65,6 +67,29 @@ thefonts=x.fonts;
     
     var h=thehead[0];
    h.appendChild(linkScript)
+ 
+ /*Bootstrap css*/
+  var thehead=document.querySelectorAll("head");
+    
+  
+    var linkScript=document.createElement("link");
+    
+    linkScript.href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css";
+    linkScript.rel="stylesheet";
+    
+    var h=thehead[0];
+   h.appendChild(linkScript)
+ /*Bootstrap JS*/
+ var thebody=document.querySelectorAll("body");
+    
+  
+    var pjsScript=document.createElement("script");
+    
+    pjsScript.src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js";
+    
+    
+    var h=thebody[0];
+   h.appendChild(pjsScript)
  
  /*Processing JS */
  var thebody=document.querySelectorAll("body");
