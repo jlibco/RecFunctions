@@ -20,7 +20,7 @@ Javascipt library concerning Math, DOM modification, and JSON, and css vars.
 
 Created by Josh T.
 
-Also Known as RedRabbit on KhanAcademy @nemoking 
+Also Known as Nemo on KhanAcademy @nemoking 
 
 Auto loads popular scripts.
 
