@@ -901,6 +901,24 @@ getQuery("body").appendChild(thediv208);
    
     };
  
+  var DownLoad=function(name,contents){
+            var thecode=Encode(random(0,10).toString());
+            
+        var a1=document.createElement("a");
+        document.body.appendChild(a1);
+        
+        a1.outerHTML="<a id='"+thecode+"' href='data:text;charset=utf-8,"+encodeURIComponent(contents)+"' download="+name+">Your Download</a>";
+            
+        a1.style.display="none";
+
+      
+document.getElementById(thecode).click();
+document.getElementById(thecode).remove();
+            
+        };
+        
+ 
+ 
 var DataBase=function(name){
 this.name=name; 
 this.data=[];
