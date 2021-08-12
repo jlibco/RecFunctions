@@ -129,7 +129,7 @@ thefonts=x.fonts;
  
  window.setTimeout(function(){
  if(window.thefonts===undefined){
-window.thefonts=["Roboto:wght@100"]; 
+window.thefonts=["STIX+Two+Text"]; 
 }
   var thebody=document.querySelectorAll("body");
     
