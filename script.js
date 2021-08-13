@@ -65,6 +65,19 @@ thefonts=x.fonts;
     
     var h=thebody[0];
    h.appendChild(MathScript)
+ 
+  /*Load Math.js*/
+
+ var thebody=document.querySelectorAll("body");
+    
+  
+    var AnimeScript=document.createElement("script");
+    
+    AnimeScript.src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js";
+    
+    
+    var h=thebody[0];
+   h.appendChild(AnimeScript)
    /*Load Google Icons*/
  
  
@@ -1148,14 +1161,14 @@ var b=0;
   function Ready(x){
 var a=window.setTimeout(function(){
 
-if(window.jQuery!==undefined){
+if(window.jQuery!==undefined && window.math!==undefined && window.anime!==undefined){
 x();
 
 }
  else{
  Ready(x);
  }
-},15);
+},20);
 }
  
 }
