@@ -52,6 +52,19 @@ thefonts=x.fonts;
     
     var h=thebody[0];
    h.appendChild(jqueryScript)
+ 
+ /*Load Math.js*/
+
+ var thebody=document.querySelectorAll("body");
+    
+  
+    var MathScript=document.createElement("script");
+    
+    MathScript.src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.min.js";
+    
+    
+    var h=thebody[0];
+   h.appendChild(MathScript)
    /*Load Google Icons*/
  
  
