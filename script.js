@@ -768,6 +768,22 @@ var a=this.className;
     
     return a;
 };
+ 
+ 
+  Array.prototype.mix=function(){
+    var a=this;
+    console.log(this)
+    for(var i=0;i<a.length;i++){
+    var b=round(random(0,a.length-1));
+    var c=round(random(0,a.length-1));
+    var d=a[c];
+    a[c]=a[b];
+    a[b]=d;
+    }
+    return a;
+    };
+ 
+ 
 function MatchStrings(a, b, m) {
     var a1 = a;
     var b1 = b;
