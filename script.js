@@ -772,7 +772,6 @@ var a=this.className;
  
   Array.prototype.mix=function(){
     var a=this;
-    console.log(this)
     for(var i=0;i<a.length;i++){
     var b=round(random(0,a.length-1));
     var c=round(random(0,a.length-1));
@@ -783,6 +782,19 @@ var a=this.className;
     return a;
     };
  
+ String.prototype.mix=function(){
+    var a1=this;
+    a1=a1.split("")
+    for(var i=0;i<a1.length;i++){
+    var b=round(random(0,a1.length-1));
+    var c=round(random(0,a1.length-1));
+    var d=a1[c];
+    a1[c]=a1[b];
+    a1[b]=d;
+    }
+    a1=a1.join("")
+    return a1;
+    };
  
 function MatchStrings(a, b, m) {
     var a1 = a;
