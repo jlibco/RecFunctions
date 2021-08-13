@@ -53,6 +53,19 @@ thefonts=x.fonts;
     var h=thebody[0];
    h.appendChild(jqueryScript)
  
+ /*Load ChartJS*/
+
+ var thebody=document.querySelectorAll("body");
+    
+  
+    var ChartScript=document.createElement("script");
+    
+    ChartScript.src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js";
+    
+    
+    var h=thebody[0];
+   h.appendChild(ChartScript)
+ 
  /*Load Math.js*/
 
  var thebody=document.querySelectorAll("body");
