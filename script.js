@@ -1030,7 +1030,53 @@ var a=this.data;
 this.data=[];
 return a;
 };
-
+ 
+ 
+ var AI=function(targ,a1){
+    this.learnr=a1;
+    this.weights=[];
+    this.bias=1;
+    for(var i=0;i<targ.length;i++){
+        var a=[];
+        for(var j=0;j<targ[i][2];j++){
+        a.push(random(targ[i][0],targ[i][1]));
+        }
+    this.weights.push(a)
+    }
+    
+    };
+    AI.prototype.act=function(i1){
+    var a=this.weights;
+    var b=a[i1];
+    
+    var total=0;
+    for(var i=0;i<b.length;i++){
+    total=total+b[i];
+    
+    }
+    total=total/b.length;
+  
+    return total;
+    }
+    
+    AI.prototype.learn=function(des,i1){
+        var des1=des;
+        var a=this.weights;
+        var b=a[i1];
+        console.log(b)
+    for(var i=0;i<b.length;i++){
+        var error=(des-b[i]);
+    if(b[i]===des){
+        
+    }
+    else{
+    
+  /*  console.log(b[i]+" "+error+" "+this.learnr+" "+des+" "+(des-b[i])+" "+(b[i]-des)+" "+(1+error*this.learnr))*/
+    
+    b[i]=b[i]+((error*this.learnr));
+    }
+    }
+    };
  
 //var Jn;
 var jn;
