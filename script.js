@@ -1031,11 +1031,18 @@ this.data=[];
 return a;
 };
  
- 
- var AI=function(targ,a1){
-    this.learnr=a1;
+var AI=function(targ,a,rand){
+    if(a===undefined){
+    a=0.5;
+    }
+    this.learnr=a;
     this.weights=[];
     this.bias=1;
+    this.rand=rand;
+    if(this.rand===undefined){
+    this.rand=1;
+    }
+    
     for(var i=0;i<targ.length;i++){
         var a=[];
         for(var j=0;j<targ[i][2];j++){
@@ -1063,7 +1070,7 @@ return a;
         var des1=des;
         var a=this.weights;
         var b=a[i1];
-        console.log(b)
+        //console.log(b)
     for(var i=0;i<b.length;i++){
         var error=(des-b[i]);
     if(b[i]===des){
@@ -1072,11 +1079,12 @@ return a;
     else{
     
   /*  console.log(b[i]+" "+error+" "+this.learnr+" "+des+" "+(des-b[i])+" "+(b[i]-des)+" "+(1+error*this.learnr))*/
-    
-    b[i]=b[i]+((error*this.learnr));
+    var c=(error*this.learnr)
+    b[i]=b[i]+(c)+random(-c*this.rand,c*this.rand);
     }
     }
     };
+ 
  
 //var Jn;
 var jn;
