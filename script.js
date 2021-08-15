@@ -541,6 +541,15 @@ function log(x1, x2) {
   }
   return x1;
   };
+ 
+ function avg(a){
+ var a1=0;
+ for(var i=0;i<a.length;i++){
+ a1=a1+a[i];
+ }
+ a1=a1/a.length;
+ return a1;
+ };
   
     function dec2bin(dec,x) {
     dec=parseInt(dec)
