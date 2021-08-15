@@ -1040,25 +1040,33 @@ this.data=[];
 return a;
 };
  
-var AI=function(targ,a,rand){
+   var AI=function(targ,a,rand){
     if(a===undefined){
     a=0.5;
     }
+    this.targ=targ;
     this.learnr=a;
     this.weights=[];
     this.bias=1;
     this.rand=rand;
+    this.hist=[];
+    this.acthist=[];
     if(this.rand===undefined){
     this.rand=1;
-    }
     
+    }
+    this.addW=function(){
     for(var i=0;i<targ.length;i++){
         var a=[];
         for(var j=0;j<targ[i][2];j++){
         a.push(random(targ[i][0],targ[i][1]));
         }
     this.weights.push(a)
+   
+    this.hist.push([]);
     }
+    };
+    this.addW();
     
     };
     AI.prototype.act=function(i1){
@@ -1071,7 +1079,7 @@ var AI=function(targ,a,rand){
     
     }
     total=total/b.length;
-  
+         
     return total;
     }
     
@@ -1079,7 +1087,24 @@ var AI=function(targ,a,rand){
         var des1=des;
         var a=this.weights;
         var b=a[i1];
-        //console.log(b)
+        var hist1=this.hist[i1];
+        var targ1=this.targ[i1];
+         hist1.push(des);
+            for(var i=0;i<hist1.length;i++){
+            if(abs(hist1[i]-this.act(i1))<abs(targ1[0]-targ1[2])/20 && i<hist1.length-6){
+            this.acthist.push(hist1[i+5]);
+            }
+            }
+            if(this.hist.length>300){
+            this.hist.splice(0,this.hist.length-100)
+            }
+       /*
+        for(var i=0;i<1;i++){
+        b.splice(round(random(0,b.length-1)),1)
+         this.addW();
+        };*/
+        var acth=((this.acthist.length>0)?avg(this.acthist):0);
+        
     for(var i=0;i<b.length;i++){
         var error=(des-b[i]);
     if(b[i]===des){
@@ -1089,9 +1114,19 @@ var AI=function(targ,a,rand){
     
   /*  console.log(b[i]+" "+error+" "+this.learnr+" "+des+" "+(des-b[i])+" "+(b[i]-des)+" "+(1+error*this.learnr))*/
     var c=(error*this.learnr)
-    b[i]=b[i]+(c)+random(-c*this.rand,c*this.rand);
+    var apple=round(random(1))
+    c=(c)+((i%apple===0)?random(-c*this.rand,c*this.rand):0)
+    var d=avg([c,this.act(i1)-acth]);
+    var subt=(this.act(i1)-acth)
+    /*
+    p1.innerHTML=round(acth)+" "+round(this.act(i1))+" "+round(subt);
+    p2.innerHTML=d*/
+    
+    b[i]=b[i]+c;
     }
+    
     }
+    this.acthist=[];
     };
  
  
