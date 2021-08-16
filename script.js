@@ -582,7 +582,7 @@ a=a.join("");
 return a;
 }
  function purebin(bin,x){
- while(x<bin.length){
+ while(bin.length<x){
  x="0"+x;
  }
  return bin;
