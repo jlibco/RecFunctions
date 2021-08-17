@@ -52,6 +52,18 @@ thefonts=x.fonts;
     
     var h=thebody[0];
    h.appendChild(jqueryScript)
+ /*Load Moment JS*/
+
+ var thebody=document.querySelectorAll("body");
+    
+  
+    var jqueryScript=document.createElement("script");
+    
+    jqueryScript.src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js";
+    
+    
+    var h=thebody[0];
+   h.appendChild(jqueryScript)
  
  /*Load Three.JS*/
 
