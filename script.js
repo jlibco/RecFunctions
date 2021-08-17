@@ -53,6 +53,42 @@ thefonts=x.fonts;
     var h=thebody[0];
    h.appendChild(jqueryScript)
  
+ /*Load Three.JS*/
+
+ var thebody=document.querySelectorAll("body");
+    
+  
+    var jqueryScript=document.createElement("script");
+    
+    jqueryScript.src="https://cdnjs.cloudflare.com/ajax/libs/three.js/99/three.min.js";
+    
+    
+    var h=thebody[0];
+   h.appendChild(jqueryScript)
+ /*Load Pixi JS*/
+
+ var thebody=document.querySelectorAll("body");
+    
+  
+    var jqueryScript=document.createElement("script");
+    
+    jqueryScript.src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js";
+    
+    
+    var h=thebody[0];
+   h.appendChild(jqueryScript)
+ /*Load Vue JS*/
+
+ var thebody=document.querySelectorAll("body");
+    
+  
+    var jqueryScript=document.createElement("script");
+    
+    jqueryScript.src="https://cdn.jsdelivr.net/npm/vue@2";
+    
+    
+    var h=thebody[0];
+   h.appendChild(jqueryScript)
  /*Load ChartJS*/
 
  var thebody=document.querySelectorAll("body");
