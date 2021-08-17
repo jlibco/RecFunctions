@@ -560,7 +560,9 @@ bin=bin.toString();
 return parseInt(bin,x);
 }
 function str2bin(str,x){
+if(typeof str!=='string'){
 str=str.toString();
+}
 var a=[];
 for(var i=0;i<str.length;i++){
 var b=str[i];
