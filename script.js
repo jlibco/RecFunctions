@@ -581,10 +581,11 @@ a.push(c);
 a=a.join("");
 return a;
 }
- function purebin(bin,x){
+ 
+ function purebin(bin,a,x){
  bin=bin.split("");
- while(bin.length<x){
- bin.splice(0,0,x);
+ while(bin.length<a){
+ bin.splice(0,0,((bin2dec(bin,x)<=0)?'1':'0'));
  }
  bin=bin.join("");
  return bin;
