@@ -166,7 +166,17 @@ thefonts=x.fonts;
     
     var h=thehead[0];
    h.appendChild(linkScript)
- 
+ /*Popper JS*/
+ var thebody=document.querySelectorAll("body");
+    
+  
+    var pjsScript=document.createElement("script");
+    
+    pjsScript.src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js";
+    
+    
+    var h=thebody[0];
+   h.appendChild(pjsScript)
  /*Bootstrap css*/
   var thehead=document.querySelectorAll("head");
     
@@ -190,17 +200,7 @@ thefonts=x.fonts;
     var h=thebody[0];
    h.appendChild(pjsScript)
  
-  /*Popper JS*/
- var thebody=document.querySelectorAll("body");
-    
   
-    var pjsScript=document.createElement("script");
-    
-    pjsScript.src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js";
-    
-    
-    var h=thebody[0];
-   h.appendChild(pjsScript)
  
  /*Processing JS */
  var thebody=document.querySelectorAll("body");
