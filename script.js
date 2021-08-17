@@ -89,6 +89,18 @@ thefonts=x.fonts;
     
     var h=thebody[0];
    h.appendChild(jqueryScript)
+  /*Load D3 JS*/
+
+ var thebody=document.querySelectorAll("body");
+    
+  
+    var jqueryScript=document.createElement("script");
+    
+    jqueryScript.src="https://cdn.jsdelivr.net/npm/d3@7";
+    
+    
+    var h=thebody[0];
+   h.appendChild(jqueryScript)
  /*Load ChartJS*/
 
  var thebody=document.querySelectorAll("body");
@@ -115,7 +127,7 @@ thefonts=x.fonts;
     var h=thebody[0];
    h.appendChild(MathScript)
  
-  /*Load Math.js*/
+  /*Load Anime.js*/
 
  var thebody=document.querySelectorAll("body");
     
