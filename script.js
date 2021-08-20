@@ -610,7 +610,14 @@ function log(x1, x2) {
  a1=a1/a.length;
  return a1;
  };
-  
+ function def(a,b){
+ if(a===undefined){
+ return b; 
+ }
+ else{
+ return a; 
+ }
+ }
     function dec2bin(dec,x) {
     dec=parseInt(dec)
   return (dec >>> 0).toString(x);
