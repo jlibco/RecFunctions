@@ -336,8 +336,9 @@ function autoVars(){
     body.addEventListener("mousemove",doIt);
     
     for(var i=0;i<Object.keys(Math).length;i++){
-    window[Object.keys(Math)[i]]=Object.values(Math)[i]; 
+    window[(Object.keys(Math)[i])]=(Object.values(Math)[i]); 
     }
+ 
 var thediv208 = document.createElement("div");
 var jns = [];
 var jntarget = -1;
