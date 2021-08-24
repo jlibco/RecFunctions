@@ -1022,7 +1022,13 @@ getQuery("body").appendChild(thediv208);
     
      var programCode = function(processingInstance) {
     with (processingInstance) {
+     if(typeof y==="string"){
       eval(y)
+     }
+     else{
+     y(); 
+     }
+     
     }};
 
   // Get the canvas that ProcessingJS will use
