@@ -1196,6 +1196,45 @@ final=str.replace(reg);
         this.acthist = [];
     };
 
+    var IBot=function(name,link,vis){
+var iframe1=document.createElement("iframe");
+iframe1.src=link;
+iframe1.className="bots1";
+var a="IBot"+name;
+iframe1.id=a
+this.botid=a;
+
+iframe1.referrerpolicy="origin";
+iframe1.width='400';
+iframe1.height='400';
+iframe1.title='Bot '+i;
+if(vis===true){
+iframe1.style.display="block";    
+}
+else{
+iframe1.style.display="none";       
+}
+document.body.appendChild(iframe1);
+
+
+};
+
+IBot.prototype.run=function(code){
+if(code===undefined){
+code="";
+}
+
+
+var iframe1s=getId(this.botid);
+
+
+
+iframe1s.contentWindow.document.write(iframe1s.contentWindow.document.documentElement.innerHTML+code);
+
+return iframe1s.contentWindow;
+
+};
+    
 
     //var Jn;
     var jn;
