@@ -323,7 +323,8 @@ var Search=function(search,res){
 var all = document.querySelectorAll('*');
 var end=[];
 for(var i=0;i<all.length;i++){
-if( ((all[i])[search]).includes(res)){
+    var searchQuery=((all[i])[search]);
+if( searchQuery.includes(res)){
     
 end.push(all[i]);    
 }
