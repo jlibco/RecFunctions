@@ -317,8 +317,19 @@ try {
 
         }
     };
-
-
+var all = document.querySelectorAll('*');
+    
+var Search=function(search,res){
+var all = document.querySelectorAll('*');
+var end=[];
+for(var i=0;i<all.length;i++){
+if(all[i][search]===res){
+    
+end.push(all[i]);    
+}
+}
+return end;
+};
     var root = document.querySelector(':root');
     var body = document.querySelector("body");
 
