@@ -41,7 +41,7 @@ var LoadScript=function(src,where){
 var thebody = document.querySelectorAll("body");
  var thehead = document.querySelectorAll("head");
  var theScript = document.createElement("script");   
-    theScript.src='';
+    theScript.src=src;
     document[where].appendChild(theScript);
 };
 
