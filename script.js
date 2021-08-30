@@ -37,21 +37,19 @@ try {
 
     }
 
-
+var LoadScript=function(src,where){
+var thebody = document.querySelectorAll("body");
+ var thehead = document.querySelectorAll("head");
+ var theScript = document.createElement("script");   
+    theScript.src='';
+    document[where].appendChild(theScript);
+};
 
 
     /*Load jQuery*/
 
-    var thebody = document.querySelectorAll("body");
-
-
-    var jqueryScript = document.createElement("script");
-
-    jqueryScript.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js";
-
-
-    var h = thebody[0];
-    h.appendChild(jqueryScript)
+LoadScript("https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js","body");
+    
     /*Load Moment JS*/
 
     var thebody = document.querySelectorAll("body");
