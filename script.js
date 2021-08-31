@@ -52,91 +52,33 @@ LoadScript("https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js","b
     
     /*Load Moment JS*/
 
-    var thebody = document.querySelectorAll("body");
-
-
-    var jqueryScript = document.createElement("script");
-
-    jqueryScript.src = "https://rawgit.com/moment/moment/2.2.1/min/moment.min.js";
-
-
-    var h = thebody[0];
-    h.appendChild(jqueryScript)
+LoadScript("https://rawgit.com/moment/moment/2.2.1/min/moment.min.js","body");
+   
 
     /*Load Three.JS*/
 
-    var thebody = document.querySelectorAll("body");
-
-
-    var jqueryScript = document.createElement("script");
-
-    jqueryScript.src = "https://cdnjs.cloudflare.com/ajax/libs/three.js/99/three.min.js";
-
-
-    var h = thebody[0];
-    h.appendChild(jqueryScript)
+LoadScript("https://cdnjs.cloudflare.com/ajax/libs/three.js/99/three.min.js","body");
+    
     /*Load Pixi JS*/
 
-    var thebody = document.querySelectorAll("body");
-
-
-    var jqueryScript = document.createElement("script");
-
-    jqueryScript.src = "https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js";
-
-
-    var h = thebody[0];
-    h.appendChild(jqueryScript)
+LoadScript( "https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js","body");
+    
     /*Load Vue JS*/
 
-    var thebody = document.querySelectorAll("body");
-
-
-    var jqueryScript = document.createElement("script");
-
-    jqueryScript.src = "https://cdn.jsdelivr.net/npm/vue@2";
-
-
-    var h = thebody[0];
-    h.appendChild(jqueryScript)
+LoadScript("https://cdn.jsdelivr.net/npm/vue@2","body");
+    
     /*Load D3 JS*/
 
-    var thebody = document.querySelectorAll("body");
-
-
-    var jqueryScript = document.createElement("script");
-
-    jqueryScript.src = "https://cdn.jsdelivr.net/npm/d3@7";
-
-
-    var h = thebody[0];
-    h.appendChild(jqueryScript)
+LoadScript("https://cdn.jsdelivr.net/npm/d3@7","body");
+    
     /*Load ChartJS*/
 
-    var thebody = document.querySelectorAll("body");
-
-
-    var ChartScript = document.createElement("script");
-
-    ChartScript.src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js";
-
-
-    var h = thebody[0];
-    h.appendChild(ChartScript)
+LoadScript("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js","body");
 
     /*Load Math.js*/
 
-    var thebody = document.querySelectorAll("body");
-
-
-    var MathScript = document.createElement("script");
-
-    MathScript.src = "https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.min.js";
-
-
-    var h = thebody[0];
-    h.appendChild(MathScript)
-
+LoadScript("https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.min.js","body");
+    
     /*Load Anime.js*/
 
     var thebody = document.querySelectorAll("body");
