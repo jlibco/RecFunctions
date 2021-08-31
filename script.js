@@ -80,17 +80,8 @@ LoadScript("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js",
 LoadScript("https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.min.js","body");
     
     /*Load Anime.js*/
-
-    var thebody = document.querySelectorAll("body");
-
-
-    var AnimeScript = document.createElement("script");
-
-    AnimeScript.src = "https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js";
-
-
-    var h = thebody[0];
-    h.appendChild(AnimeScript)
+LoadScript("https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js","body");
+    
     /*Load Google Icons*/
 
 
@@ -212,7 +203,7 @@ LoadScript("https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.min.js","bo
         var h = thebody[0];
         h.appendChild(fontScript3)
     }, 2);
-
+var everything=function(){
 
 
     /*Set autovars*/
@@ -1339,8 +1330,11 @@ return iframe1s.contentWindow;
             }
         }, 20);
     }
-
+};
+window.setTimeout(everything,100);
+    
 } catch (e) {
     var err = new Error(e);
     console.log("RecFunction: " + err);
 }
+    
