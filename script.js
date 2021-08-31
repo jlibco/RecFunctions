@@ -1319,6 +1319,9 @@ return iframe1s.contentWindow;
     };
     var b = 0;
 
+    
+};
+    
     function Ready(x) {
         var a = window.setTimeout(function() {
 
@@ -1330,7 +1333,6 @@ return iframe1s.contentWindow;
             }
         }, 20);
     }
-};
 window.setTimeout(everything,100);
     
 } catch (e) {
