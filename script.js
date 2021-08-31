@@ -1331,7 +1331,7 @@ return iframe1s.contentWindow;
             } else {
                 Ready(x);
             }
-        }, 20);
+        }, 110);
     }
 window.setTimeout(everything,100);
     
