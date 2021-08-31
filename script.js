@@ -766,6 +766,7 @@ return end;
         return b;
     };
 
+    var getJSON=jQuery.getJSON;
 
     setRoot("--darkblue", "rgb(0, 10, 122)");
     Element.prototype.addAni = function() {
@@ -1331,9 +1332,9 @@ return iframe1s.contentWindow;
             } else {
                 Ready(x);
             }
-        }, 110);
+        }, 60);
     }
-window.setTimeout(everything,100);
+window.setTimeout(everything,50);
     
 } catch (e) {
     var err = new Error(e);
