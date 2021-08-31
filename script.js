@@ -203,7 +203,7 @@ LoadScript("https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js","body")
         var h = thebody[0];
         h.appendChild(fontScript3)
     }, 2);
-var everything=function(){
+
 
 
     /*Set autovars*/
@@ -1321,10 +1321,7 @@ return iframe1s.contentWindow;
     var b = 0;
 
     
-};
-    
-  everything();
-    
+
     function Ready(x) {
         var a = window.setTimeout(function() {
 
