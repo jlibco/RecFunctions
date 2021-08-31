@@ -766,7 +766,7 @@ return end;
         return b;
     };
 
-    var getJSON=jQuery.getJSON;
+    
 
     setRoot("--darkblue", "rgb(0, 10, 122)");
     Element.prototype.addAni = function() {
@@ -1323,6 +1323,8 @@ return iframe1s.contentWindow;
     
 };
     
+  everything();
+    
     function Ready(x) {
         var a = window.setTimeout(function() {
 
@@ -1332,9 +1334,9 @@ return iframe1s.contentWindow;
             } else {
                 Ready(x);
             }
-        }, 60);
+        }, 20);
     }
-window.setTimeout(everything,50);
+
     
 } catch (e) {
     var err = new Error(e);
