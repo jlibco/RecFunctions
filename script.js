@@ -952,10 +952,10 @@ final=str.replace(reg);
     getQuery("body").appendChild(thediv208);
 
 
-    var Canvas = function(x, y) {
+    var Canvas = function(x, y,size,size2) {
  var canvas = document.querySelector(x);
         var processing = new Processing(canvas, function(processing) {
-            processing.size(400, 400);
+            processing.size(size,size2);
             processing.background(0xFFF);
     
             var mouseIsPressed = false;
