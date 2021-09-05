@@ -975,7 +975,7 @@ final=str.replace(reg);
             with (processing) {
                 
                 
-             y();
+             eval(y);
                 
             }
             if (typeof draw !== 'undefined') processing.draw = draw;
