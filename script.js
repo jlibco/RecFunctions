@@ -983,10 +983,7 @@ final=str.replace(reg);
         
 
 
-        // Get the canvas that ProcessingJS will use
-        var canvas = document.querySelector(x);
-        // Pass the function to ProcessingJS constructor
-        var processingInstance = new Processing(canvas, programCode);
+
     };
 
     var Speak = function(text, pitch1, rate, vol, voice) {
