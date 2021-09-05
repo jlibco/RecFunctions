@@ -138,8 +138,9 @@ LoadScript("https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js","body")
 
 
     var pjsScript = document.createElement("script");
-
-    pjsScript.src = "https://cdn.jsdelivr.net/gh/processing-js/processing-js@1c1d58d7dfddfdbdc351e0160496078598a0b943/processing.js";
+pjsScript.src = "https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js";
+    
+    //pjsScript.src = "https://cdn.jsdelivr.net/gh/processing-js/processing-js@1c1d58d7dfddfdbdc351e0160496078598a0b943/processing.js";
 
 
     var h = thebody[0];
@@ -952,17 +953,35 @@ final=str.replace(reg);
 
 
     var Canvas = function(x, y) {
-
-        var programCode = function(processingInstance) {
-            with(processingInstance) {
-                if (typeof y === "string") {
-                    eval(y);
-                } else {
-                    y();
-                }
-
+ var canvas = document.querySelector(x);
+        var processing = new Processing(canvas, function(processing) {
+            processing.size(400, 400);
+            processing.background(0xFFF);
+    
+            var mouseIsPressed = false;
+            processing.mousePressed = function () { mouseIsPressed = true; };
+            processing.mouseReleased = function () { mouseIsPressed = false; };
+    
+            var keyIsPressed = false;
+            processing.keyPressed = function () { keyIsPressed = true; };
+            processing.keyReleased = function () { keyIsPressed = false; };
+    
+            function getImage(s) {
+                var url = "https://www.kasandbox.org/programming-images/" + s + ".png";
+                processing.externals.sketch.imageCache.add(url);
+                return processing.loadImage(url);
             }
-        };
+    
+            with (processing) {
+                
+                
+             eval(y);
+                
+            }
+            if (typeof draw !== 'undefined') processing.draw = draw;
+        });
+        
+
 
         // Get the canvas that ProcessingJS will use
         var canvas = document.querySelector(x);
