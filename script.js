@@ -1093,13 +1093,13 @@ final=str.replace(reg);
        
          if (dupl === false) {
             this.data.push({
-                name: x,
-                content: (a[j])
+                name: a[j].name,
+                content: JSON.parse(a[j].content)
             });
         } else if (dupl === true) {
             this.data[this.dataNum] = {
-                name: x,
-                content: (a[j])
+                name: a[j].name,
+                content: JSON.parse(a[j].content)
             };
         }    
         
