@@ -1094,12 +1094,12 @@ final=str.replace(reg);
          if (dupl === false) {
             this.data.push({
                 name: x,
-                content: JSON.parse(y)
+                content: JSON.parse(a[j])
             });
         } else if (dupl === true) {
             this.data[this.dataNum] = {
                 name: x,
-                content: JSON.parse(y)
+                content: JSON.parse(a[j])
             };
         }    
         
