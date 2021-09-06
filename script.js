@@ -1072,7 +1072,7 @@ final=str.replace(reg);
         return a;
     };
     DataBase.prototype.export=function(){
-    var a=this.data;
+    var a=JSON.stringify(this.data);
     a=btoa(a);
     return a;
     };
