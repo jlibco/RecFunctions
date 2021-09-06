@@ -1071,10 +1071,39 @@ final=str.replace(reg);
         this.data = [];
         return a;
     };
-    DataBase.prototype.export=function(){
+    DataBase.prototype.exportData=function(){
     var a=JSON.stringify(this.data);
     a=btoa(a);
     return a;
+    };
+    DataBase.prototype.inportData=function(x){
+    var a=JSON.parse(x);
+    var dupl = false;
+        for(var j=0;j<a.length;j++){
+        for (var i = 0; i < this.data.length; i++) {
+            if (this.data[i].name === a[j].name) {
+                dupl = true;
+                this.dataNum = i;
+                
+            }
+           
+            
+        }
+        
+       
+         if (dupl === false) {
+            this.data.push({
+                name: x,
+                content: JSON.parse(y)
+            });
+        } else if (dupl === true) {
+            this.data[this.dataNum] = {
+                name: x,
+                content: JSON.parse(y)
+            };
+        }    
+        
+        }
     };
 
     var AI = function(targ, a, rand) {
