@@ -1028,6 +1028,7 @@ final=str.replace(reg);
     };
     DataBase.prototype.setItem = function(x, y) {
         var dupl = false;
+        this.dataNum=undefined;
         for (var i = 0; i < this.data.length; i++) {
             if (this.data[i].name === x) {
                 dupl = true;
@@ -1041,7 +1042,7 @@ final=str.replace(reg);
                 content: JSON.stringify(y)
             });
         } else if (dupl === true) {
-            this.data[i] = {
+            this.data[this.dataNum] = {
                 name: x,
                 content: JSON.stringify(y)
             };
