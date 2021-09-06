@@ -82,6 +82,9 @@ LoadScript("https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.min.js","bo
     /*Load Anime.js*/
 LoadScript("https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js","body");
     
+        /*Load p5.js*/
+LoadScript("https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js","body");
+    
     /*Load Google Icons*/
 
 
