@@ -1032,6 +1032,7 @@ final=str.replace(reg);
             if (this.data[i].name === x) {
                 dupl = true;
                 this.dataNum = i;
+                this.data[i].content=JSON.stringify(y);
             }
         }
         if (dupl === false) {
@@ -1042,7 +1043,7 @@ final=str.replace(reg);
         } else if (dupl === true) {
             this.data[i] = {
                 name: x,
-                content: y
+                content: JSON.stringify(y)
             };
         }
         dupl = false;
@@ -1051,7 +1052,7 @@ final=str.replace(reg);
     DataBase.prototype.getItem = function(x) {
         for (var i = 0; i < this.data.length; i++) {
             if (x === this.data[i].name) {
-                return this.data[i].content;
+                return JSON.parse(this.data[i].content);
             }
         }
         return this[x];
