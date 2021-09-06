@@ -1022,7 +1022,7 @@ final=str.replace(reg);
 
 
     var DataBase = function(name) {
-        this.name = name;
+        this.name = name || "DataBase "+round(random(1,100));
         this.data = [];
         this.dataNum = undefined;
     };
@@ -1070,6 +1070,11 @@ final=str.replace(reg);
         var a = this.data;
         this.data = [];
         return a;
+    };
+    DataBase.prototype.export=function(){
+    var a=this.data;
+    a=btoa(a);
+    return a;
     };
 
     var AI = function(targ, a, rand) {
