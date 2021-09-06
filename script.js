@@ -1077,7 +1077,7 @@ final=str.replace(reg);
     return a;
     };
     DataBase.prototype.inportData=function(x){
-    var a=JSON.parse(x);
+    var a=JSON.parse(atob(x));
     var dupl = false;
         for(var j=0;j<a.length;j++){
         for (var i = 0; i < this.data.length; i++) {
