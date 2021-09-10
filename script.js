@@ -257,6 +257,7 @@ var all = document.querySelectorAll('*');
 var Search=function(search,res){
 var all = document.querySelectorAll('*');
 var end=[];
+    
 for(var i=0;i<all.length;i++){
     var searchQuery=((all[i])[search]);
 if( searchQuery.includes(res)){
