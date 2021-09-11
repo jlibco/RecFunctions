@@ -1116,7 +1116,7 @@ this.deck=[];
 
 for(var i=0;i<this.amm1.length;i++){
 for(var j=0;j<this.amm2.length;j++){
-this.deck.push({a:this.amm1[i],b:this.amm2[j],ind:j+(i*this.amm1.length)})
+this.deck.push({a:this.amm1[i],b:this.amm2[j],ind:i+(j*this.amm1.length)})
 }
 }
 
@@ -1125,6 +1125,13 @@ this.deck.push({a:this.amm1[i],b:this.amm2[j],ind:j+(i*this.amm1.length)})
 Prob.prototype.roll=function(ind){
 var a=[this.deck[ind].a,this.deck[ind].b];
 return a;
+};
+Prob.prototype.add=function(thing){
+this.deck=this.deck.concat(thing);
+}
+Prob.prototype.remove=function(a,b){
+var c=this.deck.splice(a,b);    
+return c;
 };
 Prob.prototype.shuffle=function(well){
 for(var j=0;j<well;j++){
