@@ -1107,7 +1107,36 @@ final=str.replace(reg);
         
         }
     };
+    var Prob=function(type,amm){
+this.type=type;
+this.amm1=amm[0];
+this.amm2=amm[1];
 
+this.deck=[];
+
+for(var i=0;i<this.amm1.length;i++){
+for(var j=0;j<this.amm2.length;j++){
+this.deck.push({a:this.amm1[i],b:this.amm2[j],ind:j+(i*this.amm1.length)})
+}
+}
+
+
+};
+Prob.prototype.roll=function(ind){
+var a=[this.deck[ind].a,this.deck[ind].b];
+return a;
+};
+Prob.prototype.shuffle=function(well){
+for(var j=0;j<well;j++){
+for(var i=0;i<this.deck.length;i++){
+var a=round(random(0,this.deck.length-1));
+var b=this.deck[a];
+this.deck[a]=this.deck[i];
+this.deck[i]=b;
+}
+}
+
+};
     var AI = function(targ, a, rand) {
         if (a === undefined) {
             a = 0.5;
