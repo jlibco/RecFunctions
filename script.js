@@ -211,6 +211,10 @@ pjsScript.src = "https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/proc
 
 
     /*Set autovars*/
+    var all = document.querySelectorAll("*");
+    for(var i=0;i<all.length;i++){
+    all[i].d=all[i].dataset;
+    }
     function autoVars() {
         var elementTags = ["img", "div", "p", "br", "html", "body", "a", "script", "h1", "h2", "h3", "h4", "h5", "h6", "span", "button", "canvas", "dl", "dt", "svg", "iframe", "input", "meta", "link", "title", "output", "var"];
         for (var i = 0; i < elementTags.length; i++) {
