@@ -647,6 +647,8 @@ return end;
         return a;
     };
 
+    Element.prototype.ev=Element.prototype.addEventListener;
+    
     var Encode = function(x) {
         var rand = [];
         for (var i = 0; i < 1000; i++) {
