@@ -646,7 +646,9 @@ return end;
         }
         return a;
     };
-
+    var func = function(string) {
+    return (new Function( 'return (' + string + ')' )());
+}
     Element.prototype.ev=Element.prototype.addEventListener;
     
     var Encode = function(x) {
