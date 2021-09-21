@@ -780,7 +780,28 @@ return end;
     };
 
     
-
+var fact=function(x){
+    var a=1;
+    for(var i=0;i<x;i++){
+    a=a*(i+1);   
+    }
+    return a;
+    };
+    
+    var comb=function(n,k){
+    var a=fact(n)/(fact(n-k)*fact(k));
+    return a;
+    };
+    var perm=function(n,k){
+    var a=fact(n)/(fact(n-k));
+    return a;
+    };
+    
+    var bd=function(n,k,p){
+    var a=comb(n,k)*Math.pow(p,k)*Math.pow(1-p,n-k);    
+    return a;
+    };
+    
     setRoot("--darkblue", "rgb(0, 10, 122)");
     Element.prototype.addAni = function() {
 
