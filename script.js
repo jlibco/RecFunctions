@@ -596,7 +596,7 @@ return end;
 
     function bin2str(bin, x) {
         var a = [];
-        bin = bin.split(" ");
+        
         for (var i = 0; i < bin.length; i++) {
             bin[i] = parseInt(bin[i], x)
             var c = String.fromCharCode(bin[i])
