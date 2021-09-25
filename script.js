@@ -590,7 +590,7 @@ return end;
             var b = str[i];
             a.push(b.charCodeAt(0).toString(x));
         }
-        a = a.join(' ');
+       
         return a;
     }
 
@@ -602,7 +602,7 @@ return end;
             var c = String.fromCharCode(bin[i])
             a.push(c);
         }
-        a = a.join("");
+       
         return a;
     }
 
