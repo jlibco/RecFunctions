@@ -1018,7 +1018,7 @@ final=str.replace(reg);
 
 
     };
-
+var sp=window.speechSynthesis;
     var Speak = function(text, pitch1, rate, vol, voice) {
 
         var s = new SpeechSynthesisUtterance();
