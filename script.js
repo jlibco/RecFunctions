@@ -1461,7 +1461,7 @@ return iframe1s.contentWindow;
         var a = window.setTimeout(function() {
             x();
 
-            if (window.jQuery !== undefined && window.math !== undefined && window.anime !== undefined) {
+            if (window.jQuery !== undefined && window.math !== undefined && window.anime !== undefined && window.jQuery.ui!==undefined) {
                 x();
 
             } else {
