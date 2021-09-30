@@ -1460,15 +1460,15 @@ return iframe1s.contentWindow;
     function Ready(x) {
         var a = window.setTimeout(function() {
             x();
-/*
+
             if (window.jQuery !== undefined && window.math !== undefined && window.anime !== undefined) {
                 x();
 
             } else {
                 Ready(x);
             }
-            */
-        }, 200);
+            
+        }, 100);
     }
 
     
