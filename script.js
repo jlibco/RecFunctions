@@ -1457,7 +1457,7 @@ return iframe1s.contentWindow;
 
     
 
-    function Ready(x) {
+    var Ready=function(x) {
         var a = window.setTimeout(function() {
             x();
 
