@@ -173,7 +173,7 @@ window.setTimeout(function(){
     h.appendChild(linkScript);
     
 LoadScript("https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js","body");    
-},50);
+},150);
 
     window.setTimeout(function() {
         if (window.thefonts === undefined) {
@@ -1468,7 +1468,7 @@ return iframe1s.contentWindow;
                 Ready(x);
             }
             */
-        }, 100);
+        }, 200);
     }
 
     
