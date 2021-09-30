@@ -121,7 +121,7 @@ LoadScript("https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js","body")
     linkScript.rel = "stylesheet";
 
     var h = thehead[0];
-    h.appendChild(linkScript)
+    h.appendChild(linkScript);
     /*Bootstrap JS*/
     var thebody = document.querySelectorAll("body");
 
@@ -158,8 +158,22 @@ pjsScript.src = "https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/proc
 
 
     var h = thebody[0];
-    h.appendChild(fontScript)
+    h.appendChild(fontScript);
+    
+window.setTimeout(function(){
+        var thehead = document.querySelectorAll("head");
 
+
+    var linkScript = document.createElement("link");
+
+    linkScript.href = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css";
+    linkScript.rel = "stylesheet";
+
+    var h = thehead[0];
+    h.appendChild(linkScript);
+    
+LoadScript("https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js","body");    
+},20);
 
     window.setTimeout(function() {
         if (window.thefonts === undefined) {
@@ -1445,14 +1459,16 @@ return iframe1s.contentWindow;
 
     function Ready(x) {
         var a = window.setTimeout(function() {
-
+            x();
+/*
             if (window.jQuery !== undefined && window.math !== undefined && window.anime !== undefined) {
                 x();
 
             } else {
                 Ready(x);
             }
-        }, 20);
+            */
+        }, 50);
     }
 
     
