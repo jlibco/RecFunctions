@@ -1468,7 +1468,7 @@ return iframe1s.contentWindow;
                 Ready(x);
             }
             */
-        }, 50);
+        }, 100);
     }
 
     
