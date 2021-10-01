@@ -1469,7 +1469,7 @@ return iframe1s.contentWindow;
                 Ready(x);
             }
             
-        }, 100);
+        }, 200);
     }
 
     
