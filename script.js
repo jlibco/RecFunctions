@@ -163,7 +163,7 @@ pjsScript.src = "https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/proc
 window.setTimeout(function(){
         var thehead = document.querySelectorAll("head");
 
-
+window.nthroot=math.nthroot;
     var linkScript = document.createElement("link");
 
     linkScript.href = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css";
