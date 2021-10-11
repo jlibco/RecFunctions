@@ -1,4 +1,14 @@
+*{
+    position:relative;
+    box-sizing: border-box;
+    color:black;
+    text-align:center;
+    margin:5px;
+    padding:5px;
+    
+}
+
 body{
-background:red url("") no-repeat fixed center;
+background:none url("") no-repeat fixed center;
   
 }
