@@ -6,6 +6,7 @@
     margin:5px;
     padding:5px;
     font-family: "Times New Roman", Times, serif;
+    animation: nothing 0s linear 0s 0 normal;
 }
 
 body{
