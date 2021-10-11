@@ -12,3 +12,72 @@ body{
 background:none url("") no-repeat fixed center;
   
 }
+
+  @keyframes fadein{
+    from{
+    opacity:0;
+    }
+    to{
+    opacity:1;
+    }
+    }
+    @keyframes leftin{
+    from{
+    left:-100%;
+    }
+    to{
+    left:0%;
+    }
+    }
+    
+     @keyframes rightin{
+    from{
+    left:100%;
+    }
+    to{
+    left:0%;
+    }
+    }
+    @keyframes scalein{
+    from{
+    transform:scale(3.0);    
+    }
+    to{
+    transform:scale(1.0);
+    }
+    }
+    
+    @keyframes rotatein{
+    from{
+    transform:rotate(360deg);    
+    }
+    to{
+    transform:rotate(0deg);
+    }
+    }
+    
+    @keyframes spinin{
+    from{
+      
+    transform:matrix(0.1,0,0,0.1,0,0) rotate(360deg) rotateX(0deg);
+    
+    }
+    to{
+    
+    transform:matrix(1,0,0,1,0,0) rotate(0deg) rotateX(360deg);
+    }
+    
+    }
+    
+    @keyframes newbody{
+    from{
+    transform:rotateX(360deg) rotate(360deg) scale(0.5);
+    }
+    to{
+    transform:rotateX(0deg) rotate(0deg) scale(1);    
+    }
+    }
+    
+    @keyframes nothing{
+        
+    }
