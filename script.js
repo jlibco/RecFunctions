@@ -110,7 +110,9 @@ LoadScript("https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js","body")
 
 
     var h = thebody[0];
-    h.appendChild(pjsScript)
+    h.appendChild(pjsScript);
+    
+    var getBootstrap=function(){
     /*Bootstrap css*/
     var thehead = document.querySelectorAll("head");
 
@@ -132,7 +134,8 @@ LoadScript("https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js","body")
 
 
     var h = thebody[0];
-    h.appendChild(pjsScript)
+    h.appendChild(pjsScript);
+    };
 
 
 
