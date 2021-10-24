@@ -161,7 +161,7 @@ pjsScript.src = "https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/proc
     h.appendChild(fontScript);
     
 window.setTimeout(function(){
-    window.nthroot=window.math.nthRoot;
+  //  window.nthroot=window.math.nthRoot;
         var thehead = document.querySelectorAll("head");
 
 
