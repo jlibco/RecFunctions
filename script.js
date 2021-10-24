@@ -117,7 +117,7 @@ LoadScript("https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js","body")
 
     var linkScript = document.createElement("link");
 
-    linkScript.href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css";
+    linkScript.href = "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css";
     linkScript.rel = "stylesheet";
 
     var h = thehead[0];
@@ -128,7 +128,7 @@ LoadScript("https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js","body")
 
     var pjsScript = document.createElement("script");
 
-    pjsScript.src = "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js";
+    pjsScript.src = "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js";
 
 
     var h = thebody[0];
