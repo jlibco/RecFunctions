@@ -174,7 +174,7 @@ window.setTimeout(function(){
     h.appendChild(linkScript);
     
 LoadScript("https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js","body");    
-},150);
+},200);
 
     window.setTimeout(function() {
         if (window.thefonts === undefined) {
