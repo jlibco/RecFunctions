@@ -1050,7 +1050,18 @@ var sp=window.speechSynthesis;
         return s;
 
     };
-
+ var Recon=function(){
+   var recognition = new webkitSpeechRecognition();
+var speechRecognitionList = new webkitSpeechGrammarList();
+var grammar = '#JSGF V1.0; grammar colors; public <color> = Good|More Good ;'
+speechRecognitionList.addFromString(grammar, 1);
+recognition.grammars = speechRecognitionList;
+//recognition.continuous = false;
+recognition.lang = 'en-US';
+recognition.interimResults = false;
+recognition.maxAlternatives = 1;
+     return recognition;
+ };
     var DownLoad = function(name, contents) {
         var thecode = Encode(random(0, 10).toString());
 
