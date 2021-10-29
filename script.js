@@ -1036,6 +1036,76 @@ final=str.replace(reg);
 
 
     };
+     var Process=function(can,func){
+    var sketchProc = function(processingInstance) {
+     with (processingInstance) {
+       getImage=function(s) {
+                var url = "https://www.kasandbox.org/programming-images/" + s + ".png";
+                externals.sketch.imageCache.add(url);
+                return loadImage(url);
+            }
+            mouseIsPressed = false;
+            mousePressed = function () { mouseIsPressed = true; };
+            mouseReleased = function () { mouseIsPressed = false; }; 
+            angleMode="degrees";
+            
+    
+            var keyIsPressed = false;
+            keyPressed = function () { keyIsPressed = true; };
+            keyReleased = function () { keyIsPressed = false; };
+            keyCode=undefined;
+             addEventListener("keydown", function(event) {
+                	event.preventDefault();
+                	keyCode = event.keyCode;
+                	keyPressed();
+                }, false);
+                
+                // Checks for key released events.
+                addEventListener("keyup", function(event) {
+                	event.preventDefault();
+                	keyCode = event.keyCode;
+                	keyReleased();
+                }, false);
+            
+      sin=function(x){
+                if(angleMode==="degrees"){
+                x=deg(x);
+                }
+                return Math.sin(x);
+                };
+                cos=function(x){
+                if(angleMode==="degrees"){    
+                     x=deg(x)
+                }
+                return Math.cos(x);
+                };
+                tan=function(x){
+                    if(angleMode==="degrees"){
+                     x=deg(x)
+                    }
+                    else{
+                        
+                    }
+                return Math.tan(x);
+                };
+                
+                arc2=arc;
+                arc=function(a,b,c,d,e,f){
+               
+                arc2(a,b,c,d,deg(e),deg(f));    
+                };
+                
+                rotate2=rotate;
+                rotate=function(a,b,c){
+                    console.log(deg);
+                  //  a=deg(a);
+                rotate2(deg(a));    
+                };
+                
+        window.setTimeout(function(){   
+        eval(func);
+        },500);
+    }};
 var sp=window.speechSynthesis;
     var Speak = function(text, pitch1, rate, vol, voice) {
 
