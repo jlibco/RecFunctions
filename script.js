@@ -1005,7 +1005,7 @@ final=str.replace(reg);
 
     var Canvas = function(x, y,size,size2) {
  var canvas = document.querySelector(x);
-        var processing = new Processing(canvas, function(processing) {
+            var processing = new Processing(canvas, function(processing) {
             processing.size(size,size2);
             processing.background(0xFFF);
     
@@ -1106,6 +1106,14 @@ var Process=function(can,func){
         eval(func);
         },500);
     }};
+ 
+
+    // Get the canvas that Processing-js will use
+    var canvas = document.getElementById(can); 
+    // Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+    var processingInstance = new Processing(canvas, sketchProc); 
+    
+ };
          
 var sp=window.speechSynthesis;
     var Speak = function(text, pitch1, rate, vol, voice) {
