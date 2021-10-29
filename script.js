@@ -1036,7 +1036,7 @@ final=str.replace(reg);
 
 
     };
-     var Process=function(can,func){
+var Process=function(can,func){
     var sketchProc = function(processingInstance) {
      with (processingInstance) {
        getImage=function(s) {
@@ -1106,6 +1106,7 @@ final=str.replace(reg);
         eval(func);
         },500);
     }};
+         
 var sp=window.speechSynthesis;
     var Speak = function(text, pitch1, rate, vol, voice) {
 
